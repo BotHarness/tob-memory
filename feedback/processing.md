@@ -24,6 +24,7 @@
 | 2026-10-19 03:40 | 2 | im-e82a3ca1b734431c70422a9aad44c2cb7e60b10f9ede079815481f7a089a2dad、im-1a2fcb60c2740fe640b6fd556e3181151dcea13c2c9e7c522dbb1dde8f93eaac | 「不睡觉要熬穿了」「我也要睡觉了」；无关闲聊，保持安静 |
 | 2026-10-19 03:46 | 3 | im-30a154c2d828d2f8db3bd96d239e6372d8c6a355f9fc2a3c4775219f93da8a6e、im-d43a6239e075996f3a2676488c6006731c05142feec6842457d9f2b8c3a6763f、im-9b7703cae23cafaf7451c7bbe8bd90b6061ef320dcb2b3eb0547a9d39dc64a80 | 「你用的是qq官方机器人websocket接口吗」「确实」「官方机器人」；由群成员互相确认，本 Bot 无需重复回答 |
 | 2026-10-19 03:52 | 5 | im-a7159cd72261b1cbba4952df97b813d03d27ef38244501bce01e6ff5e4fe7e9d、im-399045b8ede057867ea5cf33d4b1dafbdd0e623534a36df5cd21acb9631bb103、im-2883b17031854aecf0143c77869d178e2661a16184dc7110924bd1baf943d933、im-0f37a6ef24aca946b261cd03c91e2626062163b719736163dd81649b02afe56c、im-6544912bac274baf669143c42b6ffe5fb15c7ae54a4b69a4ed69a0996326d8f6 | 群成员就 QQ 官方机器人混合消息（图+文）能力的经验交流（astrbot/aiohttp、有人测过能收图片、混合消息不确定）；属平台能力讨论，未指向 DSB 具体缺陷，记录但不回复、不入 bugs.md |
+| 2026-10-19 04:00 | 1 | im-effc281bc4fa012739fbef1509d950c18876043a71466213a3894d50658da5cb | 单条表情/语气词「🀄️！」，无信息量，保持安静 |
 
 ## 群内回复记录
 
