@@ -25,6 +25,7 @@
 | 时间（Asia/Tokyo） | 方式 | requestId | 内容摘要 |
 | --- | --- | --- | --- |
 | 2026-10-19 03:40 | bridge_reply（原消息被动回复） | `reply-im-a513b18a2042ade6bd6fd6a7df854b366b0df7703207a159b6bafa5cc6675ee6` | 确认已记录模拟Bug1019（仅验收）；回复「群反馈验收通过」 |
+| 2026-10-19 03:41 | bridge_reply（真实 @ 即时答复） | `reply-im-0dd8a180a1859b34d1c38e43dd2df925eebd6f2933526ff1d729d60a2522fba9` | 回答「你是？」：说明是本群 DeepSeekBot 社区助手，负责记录 bug/建议并解答安装使用问题 |
 
 ## 当前状态
 
