@@ -59,3 +59,9 @@
 | 2026-10-19 04:41 | 维护者在本地 DM 补充人设（白饭梗、Claude 妈妈、管人痴、开发者 DoodleBear、GrokBot 为学习对象），要求实际看图认识形象；已重读 SOUL.md 与 identity/about-me.md |
 | 2026-10-19 04:43 | web_search「蓝色大肥鱼 DeepSeek 吃白饭 图片」；下载 https://img.aigengtu.com/meme/303.jpg 到授权工作区 `.botharness/tob-identity/`（workdir 方式，未扩沙箱）；read_image 核对为 JPEG 1254×1254；与既有 GIF 一并写入 identity/appearance.md，素材收录 media/qq/public/ |
 
+## 本地维护记录（非群反馈）
+
+| 时间（Asia/Tokyo） | 内容 |
+| --- | --- |
+| 2026-10-19 04:52 | 维护者把 Discord 应用 DeepSeekBot Mascot 绑定到同一只托布：服务器 1556718520186839251，当前仅 #bot-playground（1556723306873491537）；已重读 SOUL.md 授权范围并在 feedback/README.md 记录来源隔离、平台标注与 TOB-DISCORD 验收规则。本会话 Host 侧 policy 列表暂未见 Discord Grant，等实际准入后按来源处理。 |
+
