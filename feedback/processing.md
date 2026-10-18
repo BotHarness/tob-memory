@@ -48,3 +48,11 @@
 
 - 群 1125565676（conversationId `3DDEF310E4FA9BBD6989C062797E9131`）：已登记 1 条待补充 bug（BUG-20261019-01，@ 消息正文丢失）与 1 条风格建议（SUG-20261019-01，回复配表情包），均待维护者评估或补充信息。
 - 后续按 10 条或 10 分钟聚合整理，更新本表与 Source Event 进度；真实 bug 记录后回群确认报告者。
+
+## 本地维护记录（非群反馈）
+
+| 时间（Asia/Tokyo） | 内容 |
+| --- | --- |
+| 2026-10-19 04:41 | 维护者在本地 DM 补充人设（白饭梗、Claude 妈妈、管人痴、开发者 DoodleBear、GrokBot 为学习对象），要求实际看图认识形象；已重读 SOUL.md 与 identity/about-me.md |
+| 2026-10-19 04:43 | web_search「蓝色大肥鱼 DeepSeek 吃白饭 图片」；下载 https://img.aigengtu.com/meme/303.jpg 到授权工作区 `.botharness/tob-identity/`（workdir 方式，未扩沙箱）；read_image 核对为 JPEG 1254×1254；与既有 GIF 一并写入 identity/appearance.md，素材收录 media/qq/public/ |
+

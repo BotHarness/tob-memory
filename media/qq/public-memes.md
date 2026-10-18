@@ -23,3 +23,19 @@
 - 搜索使用 web_search / web_fetch；实际下载用 curl 在已授权工作区 `/opt/botharness/seo-tutorial/feedback-media` 下完成，未放宽会话沙箱。
 - read_image 只返回单帧预览；GIF 完整动画未逐帧核对。
 - 未使用任何生成式假图；未把此前的 Minecraft GIF 冒充为 DeepSeek 表情包。
+
+## deepseek-tob-rice-303.jpg
+
+| 项目 | 内容 |
+| --- | --- |
+| 文件 | `media/qq/public/deepseek-tob-rice-303.jpg` |
+| 备用副本 | `/opt/botharness/seo-tutorial/feedback-media/.botharness/tob-identity/meme-303.jpg` |
+| 实际格式 | JPEG（JFIF baseline），1254 × 1254，831,827 字节 |
+| SHA-256 | `f36895ebd43aca4d75d9358f5cc8c1ee5e1a8b0dc82adffa31f0641e4be87805` |
+| 画面（read_image 实测） | 深蓝长发鲸鱼娘女仆：鳍状鲸鱼耳、白荷叶边头饰、深蓝女仆裙配白围裙（印蓝鲸）、身后鲸鱼尾、右脚边一碗白饭（碗印蓝鲸）；对话框文字「你这吃白饭的蓝色大肥鱼！」「就吃白饭怎么滴！我的V4 Flash正式版不好用吗？」 |
+| 来源页 | https://aigengtu.com/zh/meme/303 |
+| 直接下载地址 | https://img.aigengtu.com/meme/303.jpg |
+| 署名 | 转载页未标注原作者，待补充；不宣称自己原创 |
+| 用途 | 维护者指定的形象认识与「吃白饭」梗参考，可复用 |
+| 时间 | 2026-10-19 04:43（Asia/Tokyo），维护者要求实际执行形象认识任务 |
+
