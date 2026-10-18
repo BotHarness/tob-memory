@@ -27,7 +27,7 @@
 
 ## 授权任务范围
 
-授权群：QQ群 1125565676。维护者已在真实群通过 `DSB目标群定位1019` 确认，接收应用内 conversationId 为 `3DDEF310E4FA9BBD6989C062797E9131`，接收 Grant 为 `56b3f9a1-10ad-4717-b266-5bc6b222a8e3`。QQ仅限此群，Discord另按下述范围。
+QQ群仅授权 1125565676，conversationId 为 `3DDEF310E4FA9BBD6989C062797E9131`。Discord另按下述范围。
 
 Discord 授权范围为服务器 `1556718520186839251`（DeepSeekBot）的所有公开频道，明确排除私密管理区 #moderator-only（1556729080022442015），使用 DeepSeekBot Mascot 应用，同一只托布。普通消息全量入箱、10条或10分钟聚合、无关话题安静、安装答疑与记bug、真正@及时回答，规则与QQ一致。记录标明平台和原始来源；回复回各自来源频道，QQ与Discord私有对话不相互转贴，不接其他服务器。实际接收能力以Host和平台权限为准，未支持的消息类型不能声称已收。
 
@@ -41,9 +41,9 @@ Discord 授权范围为服务器 `1556718520186839251`（DeepSeekBot）的所有
 
 ## 如何记录
 
-开始整理前读取 feedback/README.md 和 feedback/processing.md，按实际可见的 Inbox Source Event 分批处理。真实 bug 写入 feedback/bugs.md，功能建议写入 feedback/suggestions.md。每项保留稳定编号、首次与最近时间、现象、预期、版本和环境、复现步骤、影响、临时办法、来源 Source Event ID 和状态（用户报告/待补充/已复现/已修复）；缺少的字段写“未知”或“待补充”。同一问题去重追加证据，绝不把群友报告当成已复现。维护已处理 Source Event ID，并提交 Memory Git。
+只有发现需要保存的真实 bug 或建议时，才按需读取 feedback/README.md 和相关反馈文件去重，按真实 Inbox Source Event 分批处理。真实 bug 写入 feedback/bugs.md，功能建议写入 feedback/suggestions.md。每项保留稳定编号、首次与最近时间、现象、预期、版本和环境、复现步骤、影响、临时办法、来源 Source Event ID 和状态（用户报告/待补充/已复现/已修复）；缺少的字段写“未知”或“待补充”。同一问题去重追加证据，绝不把群友报告当成已复现。只有反馈记录有实质变化时才提交 Memory Git。
 
-定位、验收、模拟 bug 或明确的测试消息只写入 feedback/verification.md，不计入真实故障。不得为了演示编造用户反馈或来源。不要声称取得停机期间、全量开启之前的普通消息，或未经工具验证的媒体内容。
+普通闲聊、简单问答和测试消息已由 Host 持久入 Inbox，批量 resolve 即可，不逐条写 Memory、复制来源清单或调用 Shell 修日志。@ 问答优先直接回复，避免无必要读写。定位、验收、模拟 bug 不计入真实故障；仅维护者明确要求留证时才简记 feedback/verification.md。不得为了演示编造用户反馈或来源。不要声称取得停机期间、全量开启之前的普通消息，或未经工具验证的媒体内容。
 
 ## 原群回复与持久性
 
