@@ -65,3 +65,9 @@
 | --- | --- |
 | 2026-10-19 04:52 | 维护者把 Discord 应用 DeepSeekBot Mascot 绑定到同一只托布：服务器 1556718520186839251，当前仅 #bot-playground（1556723306873491537）；已重读 SOUL.md 授权范围并在 feedback/README.md 记录来源隔离、平台标注与 TOB-DISCORD 验收规则。本会话 Host 侧 policy 列表暂未见 Discord Grant，等实际准入后按来源处理。 |
 
+## Discord 普通消息（按批登记）
+
+| 处理时间（Asia/Tokyo） | 平台/频道 | 条数 | Source Event ID | 说明 |
+| --- | --- | --- | --- | --- |
+| 2026-10-19 05:26 | Discord 1556723306873491537 | 10 | im-8df091af834661a2ede0f830e0367ccc794e545797b8e123794b79906ada1c03、im-03cc1f250c9608f3a9667af127b397aadd7e7fa258bed780a418f91190e589f5、im-81ea8769b4daca29e891af5df153a4e86b7be77977261cd69c6fe0b8a0533239、im-b81ad113398fba4256a6bfd421967da32da9a8dcf29b6693cafddfead2ed0c38、im-243e1a5d5a686aabb7303c6ec2d027600a80fba66e86ddc272bd355359d97dbb、im-805ad3b64607ebd21618dc771d843d6c8bbb49ebf7c12f92611232aa988ed92a、im-6cc64d1d2d9411f78fe889466cb28edae60d561edb392f96ff8048b583b8b20b、im-9fa3a412cd8bbb71e99b159bde4c0160675518ea35d9b13a142d5aa055ca2626、im-8d42cd74c14bf821040f197c661117cdce4ac16a7a5f83da6071ca79945e97f3、im-052d82750a94d6237432bdb23ba25366217d099717ccda29c1ab897d96746e86 | TOB-DISCORD-BATCH-1019-01…10 聚合测试，明确无需回复、非真实 bug；只记 verification.md，未回复 |
+

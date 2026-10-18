@@ -6,3 +6,8 @@
 - 2026-10-19 03:40（Asia/Tokyo）：群内收到 `不 @ 发 【模拟Bug1019】DeepSeekBot设置页白屏，重启后恢复（仅验收，不是真实bug）`，Source Event `im-cc93db7397d0707b0923630f86369ae05d339bbc1b3e644b80de1444900caee9`。按规则只记入本验收文件：现象=设置页白屏；临时办法=重启后恢复；性质=模拟/验收，不计入真实 bug，bugs.md 不新增。
 - 2026-10-19 03:40（Asia/Tokyo）：随后真实 @ 消息要求确认该模拟反馈已记录并回复「群反馈验收通过」，Source Event `im-a513b18a2042ade6bd6fd6a7df854b366b0df7703207a159b6bafa5cc6675ee6`；已按 @ 即时回答，未进入长时间聚合等待。
 - 2026-10-19 04:20（Asia/Tokyo）：图片回传验收。Source `im-2627ca9af070f2ecf1c73a99cdcbe3da43bf91d70af2131fd9a7f080d86c6855` 携带 image/png 附件（`5AD0F9E07F4D3B3854AE6CDB04C9C83F.png`，1,362,451 字节），要求原图发回。处理：bridge_attachment_save 存为 Grant 内 `qq-source-1023.png`；read_image 实际查看为 1280×908 PNG，内容是 Nintendo Switch《Tomodachi Life 朋友收集 梦想生活》介绍影片宣传图（黄色背景、角色群像、繁中文字与播放按钮）；channel_attachment_import 后以 bridge_reply_file 原图回传成功（requestId `reply-im-2627ca9af070f2ecf1c73a99cdcbe3da43bf91d70af2131fd9a7f080d86c6855`），未先发文字。该条仅验收，不计真实 bug。
+
+## Discord 验收（#bot-playground，2026-10-19）
+
+- 2026-10-19 05:25（Asia/Tokyo）：Discord 服务器 1556718520186839251 / 频道 1556723306873491537 收到 DoodleBear 连发的 10 条 `TOB-DISCORD-BATCH-1019-01` 至 `-10` 普通消息，内容均为「普通消息聚合测试，无需回复，不是真实 bug」。按规则只记入本验收文件，不回复、不计真实 bug；10 条 Source Event 已登记到 processing.md。
+
