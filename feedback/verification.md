@@ -10,4 +10,5 @@
 ## Discord 验收（#bot-playground，2026-10-19）
 
 - 2026-10-19 05:25（Asia/Tokyo）：Discord 服务器 1556718520186839251 / 频道 1556723306873491537 收到 DoodleBear 连发的 10 条 `TOB-DISCORD-BATCH-1019-01` 至 `-10` 普通消息，内容均为「普通消息聚合测试，无需回复，不是真实 bug」。按规则只记入本验收文件，不回复、不计真实 bug；10 条 Source Event 已登记到 processing.md。
+- 2026-10-19 05:28（Asia/Tokyo，Discord #bot-playground）：收到 `TOB-DISCORD-CONTEXT-1019-A`（暗号「蓝鲸饭团」，明说测试、非真实反馈）与 `-B`（要求下次被 @ 时查看同频道 Inbox 并回答暗号）；随后真实 @ `TOB-DISCORD-MENTION-1019` 询问暗号与身份。已按 @ 即时回复「暗号是「蓝鲸饭团」。我叫托布（Tob），开发者是群主 DoodleBear。」（requestId `reply-im-96b4e6071253858342e67c4a8a4251ad55a33446bedad5e4acf3b77ab354f96e`，Discord 回执 messageId 1561476059671568416）。全部为验收，不计真实 bug。
 

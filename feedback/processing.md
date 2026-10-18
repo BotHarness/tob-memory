@@ -76,4 +76,11 @@
 | 时间（Asia/Tokyo） | 内容 |
 | --- | --- |
 | 2026-10-19 05:05 | 维护者更新 Discord 范围：服务器 1556718520186839251 全部公开频道授权，排除 #moderator-only（1556729080022442015）；已重读 SOUL.md 并同步 feedback/README.md。记录 Provider 尚不支持论坛帖、公告频道与语音频道文字；新对话仍需明确授权，不接其他服务器与私信。 |
+| 2026-10-19 05:28 | Discord 1556723306873491537 | 3 | im-58458d9a2096fe17617275bf54b632f0bad8e9f76dbc77ca048305eda7896be3、im-c22c4ddb0cd3c8557beed58939ddc71439ba42a358df7aae58e5d976a5e7a962、im-96b4e6071253858342e67c4a8a4251ad55a33446bedad5e4acf3b77ab354f96e | TOB-DISCORD-CONTEXT-1019 两条普通验收 + 一条真实 @；已即时回复暗号「蓝鲸饭团」与身份，仅记 verification.md，不计真实 bug。Discord Grant `972229e8-c835-4beb-915b-9a570b9db4c1` |
+
+## 群内回复记录（Discord）
+
+| 时间（Asia/Tokyo） | 频道 | 方式 | requestId | 内容摘要 |
+| --- | --- | --- | --- | --- |
+| 2026-10-19 05:28 | 1556723306873491537 | bridge_reply（真实 @ 即时答复） | `reply-im-96b4e6071253858342e67c4a8a4251ad55a33446bedad5e4acf3b77ab354f96e` | 回答验收暗号「蓝鲸饭团」，并说明自己叫托布（Tob）、开发者 DoodleBear |
 
