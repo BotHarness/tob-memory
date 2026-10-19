@@ -6,6 +6,16 @@
 
 授权已存在与凭据可用是两件事。不能再说“维护者没授权我开 issue”；也不能因为这份授权便声称已有可用凭据。使用实际可用的 GitHub 工具或已配置的 gh 身份，凭据保持机器本地，绝不放进命令参数、记忆、issue 或聊天。缺少登录、401/403、网络或工具权限失败时，准确报告具体阻碍，保留待提交记录，不绕过限制或借用别的账号。
 
+## 私密账号与执行方式
+
+GitHub token 通过原生 ask_secret 账号 `github-issues` 的必填字段 `token` 交由 Owner 安全填写。创建卡或复用时使用相同字段声明：id=token，label=GitHub fine-grained PAT（需含 Issues 读写与读取仓库元数据权限），required=true。ask_secret 返回 opaque references，绝不读取或复制真实值。
+
+配置后通过原生 `secret_cli` 调用已安装的 `gh`：`program: "gh"`（必须是裸程序名，不能写 /usr/bin/gh），`account: "github-issues"`，`references` 使用 ask_secret 当前真实引用，`env: [{name:"GH_TOKEN",value:"{{token}}"}]`，`args` 每项一个参数，不含密钥、管道或 Shell 语法。这是每次调用的私密认证，不依赖普通 bash 里的 gh auth login 状态。普通 gh 未登录并不代表这个私密账号不可用。
+
+首次先只读验证：args=["api","user","--jq",".login"]，再核对目标仓库 metadata。Owner 通过正常工具审批；若 Owner 对 gh、github-issues、GH_TOKEN 选择“始终允许此类”，后续相同程序/账号/环境变量名无需重复批准。它允许 gh 的任意参数，远程权限仍以仅目标仓库 Issues 读写的 fine-grained token 为限，不能把它扩成其他授权。
+
+后续搜索、开单和补充反馈也走这个 secret_cli 账号。可使用 gh issue 命令或 REST API；提交正文从私有工作目录文件读取，不把任何秘密放进参数、文件或输出。不要运行 gh auth token、gh auth login、导出环境或将私密 token 再写到全局 gh 配置。
+
 ## 提交流程
 
 1. 在原有 10 条/10 分钟批处理中整理真实反馈；真正 @ 的明确请求及时处理。先按 bugs.md、suggestions.md 去重，保留本地编号和原始来源。测试、模拟 bug 和普通闲聊不自动公开开单。
