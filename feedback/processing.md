@@ -140,3 +140,10 @@
 | im-f77ef98c240e31b4cdaf62e1174a097a35b9b04959e463b3985a9564c61949bf、im-2849e5d710bbccef11b02819e7c01d5645b8496c23d3d23f9a192cf34f4f0bbf、im-60d0a3418a2633148c5611796723ec044fc0af26d8f78c42a3f8de7cedd5382e、im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01 | 2026-10-19 07:28 | 会话上下文/`/new`/compact 使用答疑，已在原群简短回答（不 @ 也属安装使用答疑范围） |
 | im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7 | 2026-10-19 07:28 | 上下文溢出表现为偶发失败，登记 BUG-20261019-06（待补充），待搜索后提交 |
 
+## 群内回复记录（QQ）
+
+| 时间（Asia/Tokyo） | 方式 | requestId | 内容摘要 |
+| --- | --- | --- | --- |
+| 2026-10-19 07:29 | bridge_reply 失败（source-not-found）→ bridge_post 成功（保存目标 dsb-group-1125565676-feedback） | `fb-20261019-ctx-0729` | 回答会话上下文与 `/new` 未进正式版；说明「偶发失败」实为上下文溢出提示不清，已记 BUG-20261019-06 |
+| 2026-10-19 07:30 | secret_cli 去重搜索被拒 | — | 报错 `Select one live accepted IM source_event_id for private input`；按规则一次失败即停，BUG-20261019-06 保持待提交 |
+

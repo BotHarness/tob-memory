@@ -98,5 +98,6 @@
 - 影响：用户难以判断是网络、模型还是上下文问题，影响排障与信任。
 - 临时办法：未知；群内提到 `/new` 在 PR 中，未确认正式版可用；另有先 compact 再闲置的优化讨论。
 - 来源 Source Event ID：`im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7`、`im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01`（上下文/compact 讨论）
-- GitHub 提交状态：待去重搜索后提交。
+- GitHub 提交状态：待提交。2026-10-19 07:30 在本轮去重搜索时 secret_cli 再次返回 `Select one live accepted IM source_event_id for private input`；按规则未循环重试，未开单。
+
 
