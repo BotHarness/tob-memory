@@ -80,9 +80,10 @@
 - 版本与环境：未知（Bot 运行时；QQ/Discord 与本地 DM 并行存在多来源）。
 - 复现步骤：本地 DM 中用 secret_cli 跑 gh 只读命令（带 {{token}} 引用）→ 被拒；同参数稍后重试 → exit 0，返回 DoodleBears。
 - 影响：凭据已配置却无法验证或开单，属于可用性阻塞；已自行恢复。
-- 临时办法：同一调用重试；必要时等 Host 侧修好来源选择。
+- 临时办法：有限——在新一轮纯本地 DM 中同参数重试可成功一次；属间歇问题、根因未修复，不建议反复重试。
 - 来源 Source Event ID：`im-b44f36bba34200d0e12c726a725e3e1c526d23aa151a2982443b473461b2e6ee`（群友要求记录报错）
-- GitHub Issue：#2290 https://github.com/BotHarness/DeepSeekBot/issues/2290（2026-10-19 创建，state=open，作者 DoodleBears；标题：secret_cli intermittently refuses local DM runs and demands an IM source_event_id）
+- GitHub Issue：#2290 https://github.com/BotHarness/DeepSeekBot/issues/2290（2026-10-19 创建、同日按维护者要求更正正文；state=open，作者 DoodleBears；标题：secret_cli intermittently refuses local DM runs and demands an IM source_event_id）
 - 备注：正文明确写「间歇性、未确认根因、未复现」，并把 /usr/bin/gh 的 bare program 报错列为另一条已知用法约束，不混为同一原因；未包含 token、路径或内部来源标识。
+
 
 
