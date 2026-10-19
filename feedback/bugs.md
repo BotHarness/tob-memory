@@ -68,3 +68,18 @@
 - 来源 Source Event ID：`im-23a9af6909063ed36277d3cca35755323a99f5c871d9c45ca69b5945cf958354`
 - GitHub 提交状态：待提交（gh 注入验证受阻，见本地记录）。
 
+---
+
+## BUG-20261019-05 secret_cli 注入执行被拒「需要 IM source_event_id」（用户报告，待补充）
+
+- 状态：用户报告（待补充；同一调用后来成功，疑似上下文判定问题）
+- 首次报告：2026-10-19 06:16（Asia/Tokyo）；06:21 同参数重试成功
+- 现象：用 `secret_cli`（program=`gh`，env `GH_TOKEN={{token}}`）做只读验证时，两次返回同一错误：`Select one live accepted IM source_event_id for private input`。此前把 program 写成 `/usr/bin/gh` 时另返回：`program must be a bare program name without a path`。
+- 预期行为：已配置的私密账号在本地 DM 里也能直接注入执行，不需要 IM 来源标识。
+- 版本与环境：未知（Bot 运行时；QQ/Discord 与本地 DM 并行存在多来源）。
+- 复现步骤：本地 DM 中用 secret_cli 跑 gh 只读命令（带 {{token}} 引用）→ 被拒；同参数稍后重试 → exit 0，返回 DoodleBears。
+- 影响：凭据已配置却无法验证或开单，属于可用性阻塞；已自行恢复。
+- 临时办法：同一调用重试；必要时等 Host 侧修好来源选择。
+- 来源 Source Event ID：`im-b44f36bba34200d0e12c726a725e3e1c526d23aa151a2982443b473461b2e6ee`（群友要求记录报错）
+- 备注：不要在 issue 里贴 token 或凭据细节；本条若公开需脱敏，且当前已不可复现，先留本地。
+
