@@ -30,14 +30,16 @@
 - 版本与环境：未知（QQ 群 1125565676 讨论；平台/客户端版本待补充）。
 - 复现步骤：未知；仅描述为安装后的默认打开行为。
 - 影响：新用户可能误以为无法回到原界面，造成使用困惑。
-- 临时办法：点击左上角 DeepSeekBot 图标切换。
+- 临时办法：点击左上角（鱼头图标）切换回普通 Harness；Windows 桌面上也可用 alt+` 快捷键退出。
 - 来源 Source Event ID：
+  - `im-925cf0199b75b811d7a8c30ad3ef053a86855ab01cf3290774add07ad1f09694`（第三位用户：「找了半天没找到退出键，怎么退回 dsh 的初始界面」，随后说「藏这么好」）
+  - `im-7ce3d5e2a848743904a7a4cbbcba59010b1b0fff9bc76622dcf57ccfe26eb1ad`（群友补充 alt+` 也可退出）
   - `im-bce5dab75121aacf597b6cb3c227609019f056e64d36954fedd1c4a189fb9e55`（另一用户：找半天没找到退出按钮，划到鱼头图标才想起）
   - `im-46e430e7f89553964fbbaaccc9365917917fdda517f78b0d211118cb186fab1b`（默认直接打开 deepseekbot，没法打开之前的 harness 页面）
   - `im-fd183c75e08a5476c682c9d4d1d7682df8d3bba11b09b67b9d413bd2a8556be4`（没找到在哪儿回去）
   - `im-acb2303a71473d817ed6d0660953b98350ff614b9c9c2b4cf4b1c8bcaa55d75a`（左上角 DeepSeekBot icon 的位置）
   - `im-a669c05711fc969e9d546c893e37698c8e13bec5d1e517f6f18912b4d6632bdf`（感觉要补一个引导，确实隐藏起来了）
-- 追加证据（未公开）：2026-10-19 09:51 另一位用户同样找不到退出入口，最后靠鱼头图标才想起；本想作为简短评论补到 #2289，但 secret_cli 本轮再次报 `Select one live accepted IM source_event_id for private input`，按规则未重试，评论待提交。
+- 追加证据（未公开）：2026-10-19 09:51 与 14:17 又各有一位用户找不到退出入口（后者原话「找了半天没找到退出键」「藏这么好」），并补充快捷键 alt+` 也能退出；本想作为简短评论补到 #2289，但 secret_cli 两次报 `Select one live accepted IM source_event_id for private input`，按规则未重试，评论待提交。
 - GitHub Issue：#2289 https://github.com/BotHarness/DeepSeekBot/issues/2289（2026-10-19 创建，state=open，作者 DoodleBears；标题：Installed plugin opens in Bot mode with no discoverable way back to the standard workspace）
 - 备注：群成员曾要求提 issue；2026-10-19 获得持续授权与可用凭据后已实际提交，正文脱敏、未含群聊原文/成员身份/路径/Source Event ID。
 
@@ -117,6 +119,8 @@
 - 临时办法：减少并发/降低发送频率（推测，未验证）。
 - 来源 Source Event ID：`im-e9ce8b8827a5efc148691b585b9f5acae613254ddddb699178f50016e6a21c1e`、`im-97cc0a02cb0e6e71a6c8b71d44b01f1b0b6553b1315c09f3d540cd0ecfe9d4c3`、`im-6966929459865fee5965fa3a5fd6f442188145d01158ba259a1caa05900c4551`、`im-75a8a1fd3e279383a602e29bd00dcb0d540ca7de76d1a5bcfcfe33f6ccfa63cd`、`im-bb936f3804decaf6fb2275edb82e708c49ca824b95ee0dd37d6d23f18ab45c25`
 - 备注：可能是自建反代或上游限流所致，未确认属 DSB 缺陷；先记待补充，不公开开单。
+
+
 
 
 
