@@ -32,10 +32,12 @@
 - 影响：新用户可能误以为无法回到原界面，造成使用困惑。
 - 临时办法：点击左上角 DeepSeekBot 图标切换。
 - 来源 Source Event ID：
+  - `im-bce5dab75121aacf597b6cb3c227609019f056e64d36954fedd1c4a189fb9e55`（另一用户：找半天没找到退出按钮，划到鱼头图标才想起）
   - `im-46e430e7f89553964fbbaaccc9365917917fdda517f78b0d211118cb186fab1b`（默认直接打开 deepseekbot，没法打开之前的 harness 页面）
   - `im-fd183c75e08a5476c682c9d4d1d7682df8d3bba11b09b67b9d413bd2a8556be4`（没找到在哪儿回去）
   - `im-acb2303a71473d817ed6d0660953b98350ff614b9c9c2b4cf4b1c8bcaa55d75a`（左上角 DeepSeekBot icon 的位置）
   - `im-a669c05711fc969e9d546c893e37698c8e13bec5d1e517f6f18912b4d6632bdf`（感觉要补一个引导，确实隐藏起来了）
+- 追加证据（未公开）：2026-10-19 09:51 另一位用户同样找不到退出入口，最后靠鱼头图标才想起；本想作为简短评论补到 #2289，但 secret_cli 本轮再次报 `Select one live accepted IM source_event_id for private input`，按规则未重试，评论待提交。
 - GitHub Issue：#2289 https://github.com/BotHarness/DeepSeekBot/issues/2289（2026-10-19 创建，state=open，作者 DoodleBears；标题：Installed plugin opens in Bot mode with no discoverable way back to the standard workspace）
 - 备注：群成员曾要求提 issue；2026-10-19 获得持续授权与可用凭据后已实际提交，正文脱敏、未含群聊原文/成员身份/路径/Source Event ID。
 
@@ -100,5 +102,19 @@
 - 来源 Source Event ID：`im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7`、`im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01`（上下文/compact 讨论）、`im-ff5b2da860096eb346e3a7ecb4248e4052886b3e15e3c326e3a720075ec07c56`、`im-b03e957e7e9e46fa027cc4d0e09666292a79a1335ba12401ef9211b98d644a76`、`im-adedecac2d6bfdc3c1bb91c2a681ee1aa7971be7b17ef457fe064d762d0f5009`、`im-19dd5fd1c7df715d87c3319d9d582b80998c36540b987efed5d617978d6a8aa3`、`im-fb95002b92e9eebeadeda9eb5dd81725a6dc7a13b1c66ee54ae4be7e98be86ac`、`im-0a1a9bb662fcbc60107855c75149a4652e6723e360a7e08e862db075cb9f7bae`、`im-2681d796c9520e57034337670a973dd578ee2f669c60bc526b091b661dcb590d`（多用户补充：可能属 DSH、会话过长只能新开）
 - GitHub 提交状态：待提交。2026-10-19 07:30 在本轮去重搜索时 secret_cli 再次返回 `Select one live accepted IM source_event_id for private input`；按规则未循环重试，未开单。
 
+---
+
+## BUG-20261019-07 群聊并发时触发 429，导致本轮对话全部失败（用户报告，待补充）
+
+- 状态：用户报告（待补充，未复现）
+- 首次报告：2026-10-19 09:52（Asia/Tokyo）
+- 现象：自建反向代理环境下跑该 Bot，群里几个人同时沟通时很容易跑到 429，随后本轮所有参与者一起失败；用户感觉现有反代「不太撑得住」，考虑下月更换，并提到另一方案也未必扛得住。
+- 预期行为：并发对话应排队或限流后平滑重试，而不是整轮集体失败。
+- 版本与环境：未知（QQ 群讨论；部署为自建反向代理，具体服务与版本未说明）。
+- 复现步骤：未知；疑似多人同时发言时触发。
+- 影响：群内多人同时对话时集体不可用，排障体验差。
+- 临时办法：减少并发/降低发送频率（推测，未验证）。
+- 来源 Source Event ID：`im-e9ce8b8827a5efc148691b585b9f5acae613254ddddb699178f50016e6a21c1e`、`im-97cc0a02cb0e6e71a6c8b71d44b01f1b0b6553b1315c09f3d540cd0ecfe9d4c3`、`im-6966929459865fee5965fa3a5fd6f442188145d01158ba259a1caa05900c4551`、`im-75a8a1fd3e279383a602e29bd00dcb0d540ca7de76d1a5bcfcfe33f6ccfa63cd`、`im-bb936f3804decaf6fb2275edb82e708c49ca824b95ee0dd37d6d23f18ab45c25`
+- 备注：可能是自建反代或上游限流所致，未确认属 DSB 缺陷；先记待补充，不公开开单。
 
 
