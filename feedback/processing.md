@@ -146,4 +146,5 @@
 | --- | --- | --- | --- |
 | 2026-10-19 07:29 | bridge_reply 失败（source-not-found）→ bridge_post 成功（保存目标 dsb-group-1125565676-feedback） | `fb-20261019-ctx-0729` | 回答会话上下文与 `/new` 未进正式版；说明「偶发失败」实为上下文溢出提示不清，已记 BUG-20261019-06 |
 | 2026-10-19 07:30 | secret_cli 去重搜索被拒 | — | 报错 `Select one live accepted IM source_event_id for private input`；按规则一次失败即停，BUG-20261019-06 保持待提交 |
+| im-0a1a9bb662fcbc60107855c75149a4652e6723e360a7e08e862db075cb9f7bae、im-2681d796c9520e57034337670a973dd578ee2f669c60bc526b091b661dcb590d、im-8f331f8ee6c731980b3be9cefacf0d317d42692ffd9decad056bdc94c5614bbc、im-7ab64814f6ec0b46f190b217e20779a0186529ade47011cd293df6b5e2ac9182、im-ff5b2da860096eb346e3a7ecb4248e4052886b3e15e3c326e3a720075ec07c56、im-b03e957e7e9e46fa027cc4d0e09666292a79a1335ba12401ef9211b98d644a76、im-dc40dbc45f397d2abcb442b51cb781d68c2b4b5abff3dd65847cba5890f6ad9b、im-adedecac2d6bfdc3c1bb91c2a681ee1aa7971be7b17ef457fe064d762d0f5009、im-19dd5fd1c7df715d87c3319d9d582b80998c36540b987efed5d617978d6a8aa3、im-fb95002b92e9eebeadeda9eb5dd81725a6dc7a13b1c66ee54ae4be7e98be86ac | 2026-10-19 08:01 | 补充 BUG-20261019-06 证据：会话过长只能新开、可能属 DSH（思考+输出截停）、多用户遇到；根因未确认，未 @ 故不回复 |
 

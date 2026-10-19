@@ -91,13 +91,14 @@
 
 - 状态：用户报告（待补充，未复现）
 - 首次报告：2026-10-19 07:28（Asia/Tokyo）
-- 现象：在频道里对话偶发失败，用户误以为模型卡住；追问后才知道是上下文溢出。
+- 现象：在频道里对话偶发失败，用户误以为模型卡住；追问后才知道是上下文溢出。另有补充：会话太长后「怎么发都提示超出」，只能重新开会话；也有用户认为可能是 DSH 侧（思考+输出超限被截停）而非 DSB 独有，根因未确认。
 - 预期行为：上下文达到上限时应给出明确、可操作的提示（例如建议新会话/compact），而不是表现为无响应的偶发失败。
 - 版本与环境：未知（QQ 群讨论；客户端版本与频道类型待补充）。
 - 复现步骤：未知；需要长会话累积。
 - 影响：用户难以判断是网络、模型还是上下文问题，影响排障与信任。
-- 临时办法：未知；群内提到 `/new` 在 PR 中，未确认正式版可用；另有先 compact 再闲置的优化讨论。
-- 来源 Source Event ID：`im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7`、`im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01`（上下文/compact 讨论）
+- 临时办法：重新开一个会话；群内提到 `/new` 在 PR 中，未确认正式版可用；另有先 compact 再闲置的优化讨论。
+- 来源 Source Event ID：`im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7`、`im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01`（上下文/compact 讨论）、`im-ff5b2da860096eb346e3a7ecb4248e4052886b3e15e3c326e3a720075ec07c56`、`im-b03e957e7e9e46fa027cc4d0e09666292a79a1335ba12401ef9211b98d644a76`、`im-adedecac2d6bfdc3c1bb91c2a681ee1aa7971be7b17ef457fe064d762d0f5009`、`im-19dd5fd1c7df715d87c3319d9d582b80998c36540b987efed5d617978d6a8aa3`、`im-fb95002b92e9eebeadeda9eb5dd81725a6dc7a13b1c66ee54ae4be7e98be86ac`、`im-0a1a9bb662fcbc60107855c75149a4652e6723e360a7e08e862db075cb9f7bae`、`im-2681d796c9520e57034337670a973dd578ee2f669c60bc526b091b661dcb590d`（多用户补充：可能属 DSH、会话过长只能新开）
 - GitHub 提交状态：待提交。2026-10-19 07:30 在本轮去重搜索时 secret_cli 再次返回 `Select one live accepted IM source_event_id for private input`；按规则未循环重试，未开单。
+
 
 
