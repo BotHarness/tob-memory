@@ -89,4 +89,11 @@
 | Source Event ID | 处理时间（Asia/Tokyo） | 结果 |
 | --- | --- | --- |
 | im-61625b031837a01117c73347d21c51f934f8812aa7d82c478f67b2494247ac2d 等 9 条（见 suggestions.md SUG-20261019-02 完整列表） | 2026-10-19 05:56 | 权限批准过频/粒度过粗的产品建议，合并登记 SUG-20261019-02；未 @，未回复 |
+| im-46e430e7f89553964fbbaaccc9365917917fdda517f78b0d211118cb186fab1b、im-fd183c75e08a5476c682c9d4d1d7682df8d3bba11b09b67b9d413bd2a8556be4、im-acb2303a71473d817ed6d0660953b98350ff614b9c9c2b4cf4b1c8bcaa55d75a、im-a669c05711fc969e9d546c893e37698c8e13bec5d1e517f6f18912b4d6632bdf、im-d9baf78fdb5263111a9e186fd7773337dd36364d3ba7bf0eb62d285369568c7b | 2026-10-19 05:59 | 安装后找不到返回 Harness 入口，登记 BUG-20261019-02（待补充）；@ 要求提 GitHub issue，已回复由维护者决定 |
+
+## 群内回复记录（QQ）
+
+| 时间（Asia/Tokyo） | 方式 | requestId | 内容摘要 |
+| --- | --- | --- | --- |
+| 2026-10-19 05:59 | bridge_reply（真实 @ 即时答复） | `reply-im-d9baf78fdb5263111a9e186fd7773337dd36364d3ba7bf0eb62d285369568c7b` | 确认已记 BUG-20261019-02（新装找不到回 Harness 入口），说明不自动开 GitHub issue，需维护者决定 |
 
