@@ -137,4 +137,6 @@
 | --- | --- | --- | --- | --- |
 | 2026-10-19 06:28 | BUG-20261019-02 | #2289 https://github.com/BotHarness/DeepSeekBot/issues/2289 | open，作者 DoodleBears | 搜索去重后未见同根因单；正文脱敏，含相关性参考 #1496/#1174 |
 | 2026-10-19 06:28 | BUG-20261019-05 | #2290 https://github.com/BotHarness/DeepSeekBot/issues/2290 | open，作者 DoodleBears | 明确间歇性、未复现、根因未确认；bare program 报错单列为另一约束 |
+| im-f77ef98c240e31b4cdaf62e1174a097a35b9b04959e463b3985a9564c61949bf、im-2849e5d710bbccef11b02819e7c01d5645b8496c23d3d23f9a192cf34f4f0bbf、im-60d0a3418a2633148c5611796723ec044fc0af26d8f78c42a3f8de7cedd5382e、im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01 | 2026-10-19 07:28 | 会话上下文/`/new`/compact 使用答疑，已在原群简短回答（不 @ 也属安装使用答疑范围） |
+| im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7 | 2026-10-19 07:28 | 上下文溢出表现为偶发失败，登记 BUG-20261019-06（待补充），待搜索后提交 |
 

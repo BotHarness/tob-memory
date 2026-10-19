@@ -85,5 +85,18 @@
 - GitHub Issue：#2290 https://github.com/BotHarness/DeepSeekBot/issues/2290（2026-10-19 创建、同日按维护者要求更正正文；state=open，作者 DoodleBears；标题：secret_cli intermittently refuses local DM runs and demands an IM source_event_id）
 - 备注：正文明确写「间歇性、未确认根因、未复现」，并把 /usr/bin/gh 的 bare program 报错列为另一条已知用法约束，不混为同一原因；未包含 token、路径或内部来源标识。
 
+---
 
+## BUG-20261019-06 上下文溢出表现为频道内「偶发失败」，错误不易识别（用户报告，待补充）
+
+- 状态：用户报告（待补充，未复现）
+- 首次报告：2026-10-19 07:28（Asia/Tokyo）
+- 现象：在频道里对话偶发失败，用户误以为模型卡住；追问后才知道是上下文溢出。
+- 预期行为：上下文达到上限时应给出明确、可操作的提示（例如建议新会话/compact），而不是表现为无响应的偶发失败。
+- 版本与环境：未知（QQ 群讨论；客户端版本与频道类型待补充）。
+- 复现步骤：未知；需要长会话累积。
+- 影响：用户难以判断是网络、模型还是上下文问题，影响排障与信任。
+- 临时办法：未知；群内提到 `/new` 在 PR 中，未确认正式版可用；另有先 compact 再闲置的优化讨论。
+- 来源 Source Event ID：`im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7`、`im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01`（上下文/compact 讨论）
+- GitHub 提交状态：待去重搜索后提交。
 
