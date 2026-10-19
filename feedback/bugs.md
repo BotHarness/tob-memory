@@ -54,6 +54,7 @@
 - 影响：使用皮肤的用户可能出现显示异常；影响面待评估。
 - 临时办法：未知。
 - 来源 Source Event ID：`im-8f23d171b4984d60b49cf639b624db54a31eb50ffb5e85728f0dcbd141c8c11d`、`im-20e3d4a38ca03e4b5a15e9977fd82fc37b82507976cd4b1f9a3ef9eb90d86c20`
+- 进展：2026-10-19 13:19 维护者称「优化了一下面板，主题自定义的功能」（`im-11692e29ddcb53baf7dbc848dad2d622120b28b864340ced25467ebaefe8a8cf`）；是否已修复该皮肤冲突待确认，未收到用户复验。
 - GitHub 提交状态：待提交（gh 未登录），信息不足前不公开开单。
 
 ---
@@ -116,5 +117,6 @@
 - 临时办法：减少并发/降低发送频率（推测，未验证）。
 - 来源 Source Event ID：`im-e9ce8b8827a5efc148691b585b9f5acae613254ddddb699178f50016e6a21c1e`、`im-97cc0a02cb0e6e71a6c8b71d44b01f1b0b6553b1315c09f3d540cd0ecfe9d4c3`、`im-6966929459865fee5965fa3a5fd6f442188145d01158ba259a1caa05900c4551`、`im-75a8a1fd3e279383a602e29bd00dcb0d540ca7de76d1a5bcfcfe33f6ccfa63cd`、`im-bb936f3804decaf6fb2275edb82e708c49ca824b95ee0dd37d6d23f18ab45c25`
 - 备注：可能是自建反代或上游限流所致，未确认属 DSB 缺陷；先记待补充，不公开开单。
+
 
 
