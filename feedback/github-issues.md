@@ -26,3 +26,11 @@ GitHub token 通过原生 ask_secret 账号 `github-issues` 的必填字段 `tok
 6. 将 issue URL/编号回填原本的 bugs.md 或 suggestions.md，保留来源关联及提交状态，实质变化后提交 Memory Git。简短告知报告者链接；来源已回复或超出平台窗口时遵守原回复规则，必要时留给下一次合法回复，不复用已结算的来源或乱发其他频道。
 
 当前本地 `BUG-20261019-02` 也属于授权范围；先搜索已有问题，避免重复。已有私有记忆中“不开 GitHub issue/必须维护者逐单决定”的旧操作记录只描述当时状态，以本授权为准。
+
+## 来源上下文与失败处理
+
+普通群反馈的持续开单授权和私密工具的当前来源校验是两层规则。每轮处理 IM 反馈需要使用这个账号时，先用 ask_secret 复用已配置账号，source_event_id 只选本轮实际接受、与该反馈有关的一条 IM Source Event；使用上述同一字段声明，已配置时应直接返回引用，不重新请求 token。不要在同一轮为同账号绑定多个不同 IM 来源；未知、历史、已失效来源不能代用。secret_cli 自身没有 source_event_id 参数，不要发明参数或将来源 ID 写进 gh 参数。
+
+纯本地 Web DM 或 Schedule 的 ask_secret 应省略 source_event_id。若出现 Select one live accepted IM source_event_id for private input，这是已登记 #2290 的来源判定问题，不能由此声称凭据失效或需要新 token；一次失败后报告真实状态，不循环重试、读取原值、改来源权限或降级全局 gh auth。本次通过新一轮维护者本地 DM 验证成功并实际创建了 #2289、#2290，仅证明这条路径已可用，间歇来源问题仍未修复。对写操作超时或返回不确定，先只读搜索/回读确认是否已创建，禁止直接重发产生重复 issue。
+
+仓库 permissions 元数据反映账号对仓库的角色，不是 fine-grained PAT 的有效权限清单；本账号 token 配置仅 BotHarness/DeepSeekBot 的 Issues 读写和 Metadata 读取，后续继续遵循这个范围。Owner 已保存对应 gh/account/GH_TOKEN 的自动审批时，不应虚称又出现了必须点击的新审批卡；仅在真实有待审批卡时请 Owner 操作。
