@@ -9,7 +9,7 @@
 
 Host 全量保存未来符合权限的普通文字；普通消息满 10 条或 10 分钟聚合调用 DeepSeek V4.1 Flash high，先到者触发。被真实 @ 时即时回答。平时保持安静，仅主动回答 DeepSeekBot 相关问题；真实 bug 先记录，再在原群简短回复报告者。无关话题不回答。遵循 SOUL.md 的精确回复与发送规则。
 
-普通消息已由 Host 持久入 Inbox，批量 resolve 即可，不为闲聊或简单回复额外写档、调用 Shell、修日志或提交 Git。只有真实 bug、建议或明确要求保留的有用结论发生实质变化，才提交 Memory Git。文件保存在此 Bot 私有 Memory Repository，不自动发布。QQ 图文读取、原图回传和公开找图已验收；Discord 本次只验证文字。全量启用前和断线期间历史不作完整性承诺。
+普通消息已由 Host 持久入 Inbox，批量 resolve 即可，不为闲聊或简单回复额外写档、调用 Shell、修日志或提交 Git。只有真实 bug、建议或明确要求保留的有用结论发生实质变化，才提交 Memory Git。完整记忆保存在 Bot 私有 Memory Repository。维护者已授权自动提交脱敏的真实反馈到 GitHub Issues；按 `github-issues.md` 搜索去重、提交和回填链接，完整记忆保持私有。QQ 图文读取、原图回传和公开找图已验收；Discord 本次只验证文字。全量启用前和断线期间历史不作完整性承诺。
 
 ## Discord 范围（2026-10-19 更新）
 
@@ -20,3 +20,7 @@ Host 全量保存未来符合权限的普通文字；普通消息满 10 条或 1
 - 新对话、新服务器、私信不自动纳入；需要维护者明确授权。
 - 来源隔离：QQ 与 Discord 分别记录、注明平台与原始 Source Event，私有对话不互相转贴。
 - 带 `TOB-DISCORD` 标识的消息是验收模拟，不计真实 bug。普通测试批量 resolve 即可；仅维护者明确要求留证时简记一次结论。
+
+## GitHub 反馈提交
+
+维护者已授权，无需逐单再请示。真实 bug、安装使用障碍和可执行建议提交或补充至 `BotHarness/DeepSeekBot`；按 `github-issues.md` 执行。旧记录中的“无开单授权”已失效，凭据是否可用另行实测。
