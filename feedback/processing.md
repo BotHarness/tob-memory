@@ -131,3 +131,10 @@
 | --- | --- | --- | --- |
 | 2026-10-19 06:21 | bridge_reply（真实 @ 即时答复） | `reply-im-b44f36bba34200d0e12c726a725e3e1c526d23aa151a2982443b473461b2e6ee` | 报出 secret_cli 两条原始错误，说明同参数后来成功，已登记 BUG-20261019-05（待补充） |
 
+## GitHub Issue 提交记录
+
+| 时间（Asia/Tokyo） | 本地编号 | Issue | 状态 | 说明 |
+| --- | --- | --- | --- | --- |
+| 2026-10-19 06:28 | BUG-20261019-02 | #2289 https://github.com/BotHarness/DeepSeekBot/issues/2289 | open，作者 DoodleBears | 搜索去重后未见同根因单；正文脱敏，含相关性参考 #1496/#1174 |
+| 2026-10-19 06:28 | BUG-20261019-05 | #2290 https://github.com/BotHarness/DeepSeekBot/issues/2290 | open，作者 DoodleBears | 明确间歇性、未复现、根因未确认；bare program 报错单列为另一约束 |
+

@@ -36,7 +36,8 @@
   - `im-fd183c75e08a5476c682c9d4d1d7682df8d3bba11b09b67b9d413bd2a8556be4`（没找到在哪儿回去）
   - `im-acb2303a71473d817ed6d0660953b98350ff614b9c9c2b4cf4b1c8bcaa55d75a`（左上角 DeepSeekBot icon 的位置）
   - `im-a669c05711fc969e9d546c893e37698c8e13bec5d1e517f6f18912b4d6632bdf`（感觉要补一个引导，确实隐藏起来了）
-- 备注：群成员要求「去 GitHub 提 issue」，但公开建 issue 不在当前授权内且无可用凭据，已回复说明由维护者决定。
+- GitHub Issue：#2289 https://github.com/BotHarness/DeepSeekBot/issues/2289（2026-10-19 创建，state=open，作者 DoodleBears；标题：Installed plugin opens in Bot mode with no discoverable way back to the standard workspace）
+- 备注：群成员曾要求提 issue；2026-10-19 获得持续授权与可用凭据后已实际提交，正文脱敏、未含群聊原文/成员身份/路径/Source Event ID。
 
 ---
 
@@ -81,5 +82,7 @@
 - 影响：凭据已配置却无法验证或开单，属于可用性阻塞；已自行恢复。
 - 临时办法：同一调用重试；必要时等 Host 侧修好来源选择。
 - 来源 Source Event ID：`im-b44f36bba34200d0e12c726a725e3e1c526d23aa151a2982443b473461b2e6ee`（群友要求记录报错）
-- 备注：不要在 issue 里贴 token 或凭据细节；本条若公开需脱敏，且当前已不可复现，先留本地。
+- GitHub Issue：#2290 https://github.com/BotHarness/DeepSeekBot/issues/2290（2026-10-19 创建，state=open，作者 DoodleBears；标题：secret_cli intermittently refuses local DM runs and demands an IM source_event_id）
+- 备注：正文明确写「间歇性、未确认根因、未复现」，并把 /usr/bin/gh 的 bare program 报错列为另一条已知用法约束，不混为同一原因；未包含 token、路径或内部来源标识。
+
 
