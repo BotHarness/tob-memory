@@ -41,6 +41,7 @@
   - `im-a669c05711fc969e9d546c893e37698c8e13bec5d1e517f6f18912b4d6632bdf`（感觉要补一个引导，确实隐藏起来了）
 - 追加证据（未公开）：2026-10-19 09:51 与 14:17 又各有一位用户找不到退出入口（后者原话「找了半天没找到退出键」「藏这么好」），并补充快捷键 alt+` 也能退出；本想作为简短评论补到 #2289，但 secret_cli 两次报 `Select one live accepted IM source_event_id for private input`，按规则未重试，评论待提交。
 - GitHub Issue：#2289 https://github.com/BotHarness/DeepSeekBot/issues/2289（2026-10-19 创建，state=open，作者 DoodleBears；标题：Installed plugin opens in Bot mode with no discoverable way back to the standard workspace）
+- 进展：2026-10-19 17:47 维护者列出新版改动，含「退出按钮（在底部，不会再找不到了）」（`im-38b4bd3a4b4ccad901ec7e1c78325c23580e27ab96ce98d8626639f0acd9ab77`）；尚未实机验证，也未见用户复验。
 - 备注：群成员曾要求提 issue；2026-10-19 获得持续授权与可用凭据后已实际提交，正文脱敏、未含群聊原文/成员身份/路径/Source Event ID。
 
 ---
@@ -56,7 +57,7 @@
 - 影响：使用皮肤的用户可能出现显示异常；影响面待评估。
 - 临时办法：未知。
 - 来源 Source Event ID：`im-8f23d171b4984d60b49cf639b624db54a31eb50ffb5e85728f0dcbd141c8c11d`、`im-20e3d4a38ca03e4b5a15e9977fd82fc37b82507976cd4b1f9a3ef9eb90d86c20`
-- 进展：2026-10-19 13:19 维护者称「优化了一下面板，主题自定义的功能」（`im-11692e29ddcb53baf7dbc848dad2d622120b28b864340ced25467ebaefe8a8cf`）；是否已修复该皮肤冲突待确认，未收到用户复验。
+- 进展：2026-10-19 13:19 维护者称「优化了一下面板，主题自定义的功能」（`im-11692e29ddcb53baf7dbc848dad2d622120b28b864340ced25467ebaefe8a8cf`）；17:47 又称新版含「界面自定义」「修复了很多 UI 问题」（`im-38b4bd3a4b4ccad901ec7e1c78325c23580e27ab96ce98d8626639f0acd9ab77`）。是否已修复该皮肤冲突待确认，未收到用户复验。
 - GitHub 提交状态：待提交（gh 未登录），信息不足前不公开开单。
 
 ---
@@ -133,5 +134,7 @@
 - 影响：用户以为 Bot 卡死，重复发送或放弃；多 Bot 场景下更难判断。
 - 临时办法：切回 Bot 界面查看并点「允许」。
 - 来源 Source Event ID：`im-8c128acea4c5db6a0ec1d107410318d98b8b4c0f47326a77cd2f5b5f84c32eb4`、`im-66635e813ef0fb885937fbcbfa5fa56f0c4748f0408706879288d6a58f77f0ee`、`im-f51520050f06abc0c46f9d55589f42ec1af7b687d69d978b7af0cdbf01643955`、`im-cb6409908eb57c60890ec3c2f9324a4e06d7c3a6398a2e1bae91631972e446a9`、`im-3d5651f3fb8efda92b587e6c46e3612300d5a6c8a874f70266a505ff47f0964b`、`im-7b5085b131a3ce16e8a31595944585548c0b6489e6524b8be5c91a9789f594b4`
+- 进展：2026-10-19 17:47 维护者称新版「工具审批——大简化」「工作区访问权限——大简化（accept 就完事）」（`im-38b4bd3a4b4ccad901ec7e1c78325c23580e27ab96ce98d8626639f0acd9ab77`）；是否同时解决「主界面不显示审批提示」待确认。
 - 备注：与 SUG-20261019-02（审批过频/粒度）相关，但这是「提示不可见导致误判卡死」的可用性问题，单独记录；先待补充，未公开开单。
+
 
