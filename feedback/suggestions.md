@@ -50,5 +50,11 @@
 - 现状：仅为群内讨论意见；2026-10-20 04:33 维护者回应「语言是什么就是什么。不过到时候确实可以规范一下，支持 README 多语言」，并说「我来优化优化」（`im-73eb14341a3506cc5eb101d8debc38f6133b616d0f20aebc2600e57458fb1f6e`、`im-51006902c75dc0822c7a9dedec829bf479121b08deaf6a2c2b3bfaaaa6a790d5`），尚未落地。
 - 来源 Source Event ID：`im-c5160a78deacd58fadf4467f482bcb32dfe5bb3a5e6bece705d76a69a3ed8a5dc`（市场都是英文）、`im-aa23afc4f702e270a7a80df2dc5a57d8aaed4c1d9dbeb45ff6f5173b6fa910c7`（多语言没启用）、`im-484644a4aef975c7c416b6c22a68ca2686ce1ec4e73fe1cb698e5e5585f3de5a`（新朋友可先体验手机版，上下文）
 
+## SUG-20261019-04 面板拖拽与窗口移动冲突，建议加「编辑模式」（待维护者评估）
 
+- 提出时间：2026-10-20 10:24（Asia/Tokyo）
+- 需求：整条 bar/header 都能拖动窗口时，容易和面板拖拽互相打架、把窗口拖到无法移动；目前的妥协是只让标题部分可拖动。群友建议单开一个「编辑模式」专门用来拖面板，平时不误触。
+- 使用场景：桌面端多面板布局调整。
+- 现状：仅为讨论建议；维护者表示这是当时的妥协（`im-a944ff6b1f1c09627b7b95061ef8aeb1d6b27f0095c3e029ae08b55259e89f0e`），并提到点击可直接关闭 panel。未见采纳或排期。
+- 来源 Source Event ID：`im-9b7b483d7fe944506c48df4e1a0eb0b7af6a2231778b09b9561ae394550114d7`、`im-7045a5280466eeecd23766e58646284b9675ab9022e4eb16d8a1553971298a3e`、`im-1e0dc59addd87a81555769dc6abcec0bce4a380065e429e7af430e5c62b73ef1`、`im-a944ff6b1f1c09627b7b95061ef8aeb1d6b27f0095c3e029ae08b55259e89f0e`、`im-02a2b0c615efcd3a9f54b8cffa89b97a1461cd397665bd8c891c74c7b68f60b8`、`im-fe02e170c530085dddb99f739c2c8d80e18a63f1980c31aee55fe812cc4ba59d`
 
