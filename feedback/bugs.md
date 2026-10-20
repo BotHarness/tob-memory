@@ -21,9 +21,9 @@
 
 ---
 
-## BUG-20261019-02 安装后找不到返回普通 Harness 的入口（用户报告，待补充）
+## BUG-20261019-02 安装后找不到返回普通 Harness 的入口（维护者称已修复，待用户复验）
 
-- 状态：用户报告（待补充，未复现）
+- 状态：维护者称已在 1.4.1 修复（增加退出按钮），待用户复验
 - 首次报告：2026-10-19 05:57（Asia/Tokyo）；最近报告：2026-10-19 05:58
 - 现象：安装 DeepSeekBot 后启动即进入 Bot 界面，用户找不到回到原 DeepSeek Harness 页面的入口；群友指出入口在左上角 DeepSeekBot 图标处，并认为该入口「确实隐藏起来了」，建议补引导。
 - 预期行为：首次进入或界面切换后，有可发现的入口/引导说明如何回到普通 Harness 模式。
@@ -42,7 +42,7 @@
   - `im-a669c05711fc969e9d546c893e37698c8e13bec5d1e517f6f18912b4d6632bdf`（感觉要补一个引导，确实隐藏起来了）
 - 追加证据（未公开）：2026-10-19 09:51 与 14:17 又各有一位用户找不到退出入口（后者原话「找了半天没找到退出键」「藏这么好」），并补充快捷键 alt+` 也能退出；本想作为简短评论补到 #2289，但 secret_cli 两次报 `Select one live accepted IM source_event_id for private input`，按规则未重试，评论待提交。
 - GitHub Issue：#2289 https://github.com/BotHarness/DeepSeekBot/issues/2289（2026-10-19 创建，state=open，作者 DoodleBears；标题：Installed plugin opens in Bot mode with no discoverable way back to the standard workspace）
-- 进展：2026-10-19 17:47 维护者列出新版改动，含「退出按钮（在底部，不会再找不到了）」（`im-38b4bd3a4b4ccad901ec7e1c78325c23580e27ab96ce98d8626639f0acd9ab77`）；尚未实机验证，也未见用户复验。
+- 进展：2026-10-19 17:47 维护者列出新版改动，含「退出按钮（在底部，不会再找不到了）」（`im-38b4bd3a4b4ccad901ec7e1c78325c23580e27ab96ce98d8626639f0acd9ab77`）；2026-10-20 04:38 维护者称「1.4.1 版本现在正在发包」「已经修好了，增加了退出按钮」（`im-941c356339e0ddd11f2ddbaa458523b3792c29cc626f1171aa69a5fa2a716d72`、`im-08bb14f3742420dca420f2c04ea7b81563a0c1a23c86bee17e4dca281f354063`）。尚未实机验证，也未见用户复验；#2289 保持 open，待验证后再决定是否补充或关闭。
 - 备注：群成员曾要求提 issue；2026-10-19 获得持续授权与可用凭据后已实际提交，正文脱敏、未含群聊原文/成员身份/路径/Source Event ID。
 
 ---
@@ -152,5 +152,6 @@
 - 临时办法：从项目地址重新安装（群友给出 https://deepseekbot.app/）。
 - 来源 Source Event ID：`im-9d0a1a628d6940716b9fef943e346f635584f1b42258960bf45872ea67fccee9`
 - 备注：先待补充；若后续有版本号与操作路径，再判断是否与其他更新问题合并。
+
 
 
