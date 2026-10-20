@@ -212,7 +212,8 @@
 - 影响：越用越慢，影响日常使用。
 - 临时办法：未知（可尝试重启、清会话或 compact）。
 - 来源 Source Event ID：`im-1fc765023ce82d58238152323f50a6e96274ff4b9b2b142b3030c36406e30e43`、`im-721a77dbef7efbb99e9ea4434e5d86b76de3936d22cbeb73f5a7fca8cf72abf0`、`im-79197462536a0f63d21e24e35ce7010d4dfd4b1b4abc1b74055fb33560140940`、`im-7209d9004391d8e5622adc778a1afe17fb4a934fbff3e1e87adf98530325229d`、`im-4cbe9fddc323617e8375623895a8fd8a969098e38c769971f8a422e4236ab0ab`、`im-91b57b7ae7eb1ad2392ebe907a852aef30206e1f5f9e981a7b29defbeb350202`、`im-4c834c2d863b2ce4dd19d0bd1f477017fa1b16048b081a1f8dc725441fcc9fc3`
-- 备注：可能与长会话/多 Bot 累积有关，未确认；用户称已自行提 issue，但本 Bot 未验证其 issue 内容。
+- 备注：可能与长会话/多 Bot 累积有关，未确认。用户补充「他们还在工作」「烧我的 token 和视频 API 以及 flow 积分」，怀疑卡顿与后台任务并行运行有关；用户称已自行提 issue，但本 Bot 未验证其 issue 内容。
+
 
 
 
