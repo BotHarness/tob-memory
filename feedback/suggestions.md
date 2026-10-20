@@ -58,3 +58,11 @@
 - 现状：仅为讨论建议；维护者表示这是当时的妥协（`im-a944ff6b1f1c09627b7b95061ef8aeb1d6b27f0095c3e029ae08b55259e89f0e`），并提到点击可直接关闭 panel。未见采纳或排期。
 - 来源 Source Event ID：`im-9b7b483d7fe944506c48df4e1a0eb0b7af6a2231778b09b9561ae394550114d7`、`im-7045a5280466eeecd23766e58646284b9675ab9022e4eb16d8a1553971298a3e`、`im-1e0dc59addd87a81555769dc6abcec0bce4a380065e429e7af430e5c62b73ef1`、`im-a944ff6b1f1c09627b7b95061ef8aeb1d6b27f0095c3e029ae08b55259e89f0e`、`im-02a2b0c615efcd3a9f54b8cffa89b97a1461cd397665bd8c891c74c7b68f60b8`、`im-fe02e170c530085dddb99f739c2c8d80e18a63f1980c31aee55fe812cc4ba59d`
 
+## SUG-20261019-05 卸载 Bot 时的清理边界与可发现性（待维护者评估）
+
+- 提出时间：2026-10-20 13:49（Asia/Tokyo）
+- 需求：卸载/删除 Bot 时，用户想知道哪些会被清掉。现状：工作区是用户指定的文件夹，卸载不会删；Bot 会话与部分数据库可以清理。建议把 Bot 专属会话放到独立目录，这样既直观区分哪些属于 Bot，也能在卸载时按需清理而不误删用户文件。
+- 使用场景：卸载或重装、排查残留数据时。
+- 现状：维护者回复「卸载部分还没优化」「这里很危险」「不太好做」，因为工作区是用户目录；表示会看看哪些数据库可清。未见排期。
+- 来源 Source Event ID：`im-6bd44295beb39ac74769954dd6b4c119c2a337855f469d0527a4fd9cdba9defa`、`im-cd9513cb5ff5145e001308b7bc42a96d4f332868f4f841fecdba44ff10722c66`、`im-9ebac1fa7cd6964c77b3318b30b6d923fa7d4f6a53e12a463f68eff153286d5c`、`im-17e393e44e6dde46a3ab200ae7166697a1ad69728f0ad12fb6e670cbab4cc488`、`im-65cea3c0903113740a2f32a3f5db5f51dd9e641dbe73307f4b8c202e9a4dbdb4`、`im-7bce2281c602f59b0ae4372d2569a00be4ada0fb2ec7f53ee20d592fce9ec5bc`、`im-a69ca6204c3ed70c73a74d5027f7bc64f20b329c34c25ec1b0407079a225823c`、`im-748906336187af98d74dffd6c6a7046108bf6584bf0fd5c4291a26de09bfa3dc`
+
