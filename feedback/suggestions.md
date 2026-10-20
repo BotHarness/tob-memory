@@ -82,3 +82,11 @@
 - 现状：维护者回应 Bot 聊天更倾向「对人不对事」（Slack/飞书同事式），认为用户不必理解 session/context；双方对场景定位不同，暂未形成结论。
 - 来源 Source Event ID：`im-b7a5da32cfa816a421979b880e95a891d31d8a1f58b585631352cd7f9ff69b02`、`im-90aed02d24f6b8564624adca69085cd9f1a4b202bdcb3398182bc8a63af46cba`、`im-d8fe38c439e2e3009099f23db90e13ed5170f42735e5ba5eb90328d4b21c3d4e`、`im-385cc41a77bca1dab4a97068df6bcdd3b201fc50589781b5a615da3c73fdc433`、`im-0242bce14de5193814e1fcf01b58990b1f37007209a4842bfb3467e7bcb7a076`、`im-28a3989928e835a9cf29b20502a3379c8af96a2fc2dbf0080f020a72fa553efa`、`im-b240f95a379dfd0e08b608c4b53cc2d3832479c64c54c2d9518025869c1b4cf9`、`im-cd8119acb93fe3f20dab004729fbbdfbba7a7d04332ab4024975087931695552`、`im-c555ef680d6c233cc47e9cd23da3a532c9a1de571b2e1371f32116b4acdb2b91`
 
+## SUG-20261019-08 群聊批量添加 Bot（待维护者评估）
+
+- 提出时间：2026-10-20 14:46（Asia/Tokyo）
+- 需求：希望在群聊里批量添加 Bot，而不是逐个拉入；与多 Bot 协作场景配套。
+- 使用场景：一个群里同时使用多个 Bot 做不同分工时，初始化成本高。
+- 现状：仅在讨论中提出，未见回应或排期。
+- 来源 Source Event ID：`im-b101580a65bcc0c33afa4d871ca03882f131b58d5b487b3c766028cd66c1b69c`
+
