@@ -47,6 +47,7 @@
 - 提出时间：2026-10-20 04:30（Asia/Tokyo）
 - 需求：deepseekbot.app/market 目前内容基本全英文，网站的多语言版本没有启用；中文用户阅读成本高，建议至少提供中英切换或中文条目说明。
 - 使用场景：中文用户浏览市场、挑选插件/工具时。
-- 现状：仅为群内讨论意见，未见维护者回应；未确认是否已有计划。
+- 现状：仅为群内讨论意见；2026-10-20 04:33 维护者回应「语言是什么就是什么。不过到时候确实可以规范一下，支持 README 多语言」，并说「我来优化优化」（`im-73eb14341a3506cc5eb101d8debc38f6133b616d0f20aebc2600e57458fb1f6e`、`im-51006902c75dc0822c7a9dedec829bf479121b08deaf6a2c2b3bfaaaa6a790d5`），尚未落地。
 - 来源 Source Event ID：`im-c5160a78deacd58fadf4467f482bcb32dfe5bb3a5e6bece705d76a69a3ed8a5dc`（市场都是英文）、`im-aa23afc4f702e270a7a80df2dc5a57d8aaed4c1d9dbeb45ff6f5173b6fa910c7`（多语言没启用）、`im-484644a4aef975c7c416b6c22a68ca2686ce1ec4e73fe1cb698e5e5585f3de5a`（新朋友可先体验手机版，上下文）
+
 
