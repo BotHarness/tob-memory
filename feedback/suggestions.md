@@ -66,4 +66,19 @@
 - 现状：维护者回复「卸载部分还没优化」「这里很危险」「不太好做」，因为工作区是用户目录；表示会看看哪些数据库可清。未见排期。
 - 来源 Source Event ID：`im-6bd44295beb39ac74769954dd6b4c119c2a337855f469d0527a4fd9cdba9defa`、`im-cd9513cb5ff5145e001308b7bc42a96d4f332868f4f841fecdba44ff10722c66`、`im-9ebac1fa7cd6964c77b3318b30b6d923fa7d4f6a53e12a463f68eff153286d5c`、`im-17e393e44e6dde46a3ab200ae7166697a1ad69728f0ad12fb6e670cbab4cc488`、`im-65cea3c0903113740a2f32a3f5db5f51dd9e641dbe73307f4b8c202e9a4dbdb4`、`im-7bce2281c602f59b0ae4372d2569a00be4ada0fb2ec7f53ee20d592fce9ec5bc`、`im-a69ca6204c3ed70c73a74d5027f7bc64f20b329c34c25ec1b0407079a225823c`、`im-748906336187af98d74dffd6c6a7046108bf6584bf0fd5c4291a26de09bfa3dc`
 
+## SUG-20261019-06 群聊对话清理功能（待维护者评估）
+
+- 提出时间：2026-10-20 14:33（Asia/Tokyo）
+- 需求：希望提供清理群聊对话/会话记录的能力，配合「越用越卡」与卸载清理一起管理数据。
+- 使用场景：长期使用的群或会话需要清理历史、释放空间。
+- 现状：维护者未直接回应；仅作为讨论。
+- 来源 Source Event ID：`im-fcf8fd95ff25524daaa84d5a3764cb870e92dba57ea20843dde6e724b9e967d3`
+
+## SUG-20261019-07 会话级上下文与可观测性（待维护者评估）
+
+- 提出时间：2026-10-20 14:39（Asia/Tokyo）
+- 需求：新开聊天窗口应创建新的会话上下文，同时保留 Bot 身份与长期记忆（员工身份、长期记忆、聊天记录、当前上下文分开管理）；并希望能查看每个会话的完整消息、任务计划、关键判断依据、工具调用、交付物与交接记录，而不只是记忆摘要或最终回复。
+- 使用场景：需要多个 Agent 协作开发，同时保证记忆与上下文隔离；类似「按事情」组织会话的场景。
+- 现状：维护者回应 Bot 聊天更倾向「对人不对事」（Slack/飞书同事式），认为用户不必理解 session/context；双方对场景定位不同，暂未形成结论。
+- 来源 Source Event ID：`im-b7a5da32cfa816a421979b880e95a891d31d8a1f58b585631352cd7f9ff69b02`、`im-90aed02d24f6b8564624adca69085cd9f1a4b202bdcb3398182bc8a63af46cba`、`im-d8fe38c439e2e3009099f23db90e13ed5170f42735e5ba5eb90328d4b21c3d4e`、`im-385cc41a77bca1dab4a97068df6bcdd3b201fc50589781b5a615da3c73fdc433`、`im-0242bce14de5193814e1fcf01b58990b1f37007209a4842bfb3467e7bcb7a076`、`im-28a3989928e835a9cf29b20502a3379c8af96a2fc2dbf0080f020a72fa553efa`、`im-b240f95a379dfd0e08b608c4b53cc2d3832479c64c54c2d9518025869c1b4cf9`、`im-cd8119acb93fe3f20dab004729fbbdfbba7a7d04332ab4024975087931695552`、`im-c555ef680d6c233cc47e9cd23da3a532c9a1de571b2e1371f32116b4acdb2b91`
 
