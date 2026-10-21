@@ -96,5 +96,7 @@
 - 需求：希望 Bot 能使用或继承某个现有 DSH 会话里的记忆，而不是只能靠人工把对话整理进 Memory 或当附件。
 - 使用场景：先在一个会话里积累上下文，再让指定的 PersonaBot 接手，不想重新讲一遍。
 - 现状：群内问答后提出的产品想法；维护者未见表态。当前能力边界是 Bot 会话与 DSH 会话分离，没有直接挂载入口。
-- 来源 Source Event ID：`im-b88abf1f4d5505ee1ac3e2d1aa6e0153d4b64c7175e9dac1ef686926d74d0538`、`im-c1fb29d099f137df52a6574024e010158b7c41874140b8129f77c8ee7552b88b`（上一轮问答）
+- 来源 Source Event ID：`im-b88abf1f4d5505ee1ac3e2d1aa6e0153d4b64c7175e9dac1ef686926d74d0538`、`im-c1fb29d099f137df52a6574024e010158b7c41874140b8129f77c8ee7552b88b`（上一轮问答）、`im-9d01d2f3752c7486d7b351a6f3fb503204d214cbb21a810570580837912659c4`（被问是否开单）
+- GitHub Issue：#2497 https://github.com/BotHarness/DeepSeekBot/issues/2497（2026-10-21 创建，作者 DoodleBears；搜索确认无同诉求单）
+
 
