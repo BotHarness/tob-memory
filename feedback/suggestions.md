@@ -99,6 +99,8 @@
 - 来源 Source Event ID：`im-b88abf1f4d5505ee1ac3e2d1aa6e0153d4b64c7175e9dac1ef686926d74d0538`、`im-c1fb29d099f137df52a6574024e010158b7c41874140b8129f77c8ee7552b88b`（上一轮问答）、`im-9d01d2f3752c7486d7b351a6f3fb503204d214cbb21a810570580837912659c4`（被问是否开单）
 - GitHub Issue：#2497 https://github.com/BotHarness/DeepSeekBot/issues/2497（2026-10-21 创建，作者 DoodleBears；搜索确认无同诉求单）
 - 追加评论：https://github.com/BotHarness/DeepSeekBot/issues/2497#issuecomment-6315182357（多选 session 批量导入、会话右键分享、CLI 读取 session 供总管导入；脱敏，无群聊原文）
+- 待提交设计草案（2026-10-21 12:52，因 secret_cli 再次被来源校验拒绝未发到 issue）：双向 Bot–session 接口，保持两侧独立——①只读同步；②写入分惰性/即时，即时每 session 仅允许一个 Bot，惰性有长度上限并在阈值处由低成本模型建索引；③session 可读所挂载 Bot 的记忆并互发消息，但只挂一个 Bot、可被其他 Bot 读取；④一个 Bot 可驱动多个 session，其他 Bot 可留笔记并累积索引。
+
 
 
 
