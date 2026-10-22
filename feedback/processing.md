@@ -177,3 +177,10 @@
 - 用户反馈新版本「确实比之前强多了」，并称之前连引导都走不完；可作为 1.5.0 引导流程改善的正面证据。
 - 来源 Source Event ID：`im-2f397e6ca80839dbedcb58ef7b575c34c6783e16b7bfa00bd657ffe712392b04`、`im-55e44783ae9dad20b2cfed4f905cb954d76e7b28800b077a7619f2acd409642b`
 
+## 待办：查 dsh-im 是否支持企业微信（2026-10-22 18:12 维护者指派）
+
+- 需求：确认开源仓库 `BotHarness/DeepSeekBot` 里 dsh-im 的 provider 是否包含企业微信（wecom）。
+- 进展：本机 integrations/dsh-im 仅 interface-language.json，插件实现不可读；gh 查询连续 3 次被「请选择一个有效的 IM 来源」拦下，未取得结果。
+- 恢复后动作：查 dsh-im 的 provider/适配器清单（关键词 wecom、企业微信、work.weixin），有则给出接入所需凭据与回调要求，无则建议新增适配器。
+- 来源 Source Event ID：`im-0201ba4f3bf01f3d77ff539756403b3bd6355e3b985743555617895c07fc59ab`、`im-37694c8112de1c98a93f886cf8ec485ce48084fd27f7de12d8830d9c2725d221`
+
