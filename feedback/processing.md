@@ -180,7 +180,9 @@
 ## 待办：查 dsh-im 是否支持企业微信（2026-10-22 18:12 维护者指派）
 
 - 需求：确认开源仓库 `BotHarness/DeepSeekBot` 里 dsh-im 的 provider 是否包含企业微信（wecom）。
-- 进展：本机 integrations/dsh-im 仅 interface-language.json，插件实现不可读；gh 查询连续 3 次被「请选择一个有效的 IM 来源」拦下，未取得结果。
-- 恢复后动作：查 dsh-im 的 provider/适配器清单（关键词 wecom、企业微信、work.weixin），有则给出接入所需凭据与回调要求，无则建议新增适配器。
+- 结论（2026-10-22 18:14，web 检索确认）：**支持企业微信**，两条路——①智能机器人：扫码或 Bot ID + Secret，官方 WebSocket 长连接，原生「正在思考中」与流式回答；②企业微信应用：自建应用填企业 ID、AgentId、Secret、Token、EncodingAESKey（可选代理），HTTP 回调，私聊流式，支持图片与结果文件回传，成员关注微信插件后可在微信使用。来源：https://github.com/xmanrui/dsh-im README「当前内置渠道」表。
+- 过程：本机 integrations/dsh-im 仅 interface-language.json；gh 查询连续 3 次被「请选择一个有效的 IM 来源」拦下，改 web 检索后取得结论。
+- 附带发现：该 README 明确 DSH 0.2.1-rc.2 要求网关请求带调用方 `peer`，与 BUG-20261019-21 的漏 peer 报告相互印证。
 - 来源 Source Event ID：`im-0201ba4f3bf01f3d77ff539756403b3bd6355e3b985743555617895c07fc59ab`、`im-37694c8112de1c98a93f886cf8ec485ce48084fd27f7de12d8830d9c2725d221`
+
 
