@@ -191,3 +191,10 @@
 - 与之相关的取舍：产品无法「既要又要」，UI 融合 vs 分离最终还是插件化来解（谁不喜欢就换）。
 - 来源 Source Event ID：`im-80263512febf69af903f6394299c2e7e5082e44b25416f299ba71627f96a6604`、`im-7c3b2bb52e08780ccacf2696ec2eb60ec8e21ee77a1dc24ffbb79cb65ce68672`、`im-0a3bb625af1626357c4f88dade08947da87fe48d014f945191430c0ead744250`、`im-7fbfcff7d3147ae809a4987fec106e7040aa21fd033fa5069edcbf112d5a7bea`
 
+## UI 改版理由（2026-10-22 18:29，维护者自述）
+
+- 原界面照抄 GrokBot，右侧 sidebar 塞了很多「平时只有 1% 时间用得到」的功能，浪费空间。
+- 很多使用场景其实只需要一个像 QQ 的纯聊天界面：不看记忆、不操控电脑、不开浏览器，甚至几乎不看界面。
+- 因此新版转向「按使用场景给主路径」，功能收进可折叠/可插件化的面板；与 SUG-20261019-11（切换成本）和 SUG-20261019-07（统一/分离）互为背景。
+- 来源 Source Event ID：`im-bdf2aea2527dce272658025d4a4314e46e93df9e4abab38abc7087b5df33d5aa`、`im-9f30bae7b829e12940dc07c35ee787007ef35e7dd6032e9ac35441ee8abe783c`、`im-54bce3d51faf4357a4aa3d6fa0d3ac63c1191a2d0bdfcff8a55dc2c8d0a5ed67`、`im-992b4be9ae990132322f873aded67b07f864a3ae5758511cf231efefbcabb471`、`im-8b294f29da6279517b2bde773a9921d29a13413fca5ee7b39a1a1728c69e7eff`、`im-254250ab87fd1b43381588d12d431b70c848fef4ab316b06106aab59bb211c43`
+
