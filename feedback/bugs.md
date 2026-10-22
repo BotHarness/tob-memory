@@ -216,6 +216,7 @@
 - 影响：越用越慢，影响日常使用。
 - 临时办法：未知（可尝试重启、清会话或 compact）。
 - 来源 Source Event ID：`im-1fc765023ce82d58238152323f50a6e96274ff4b9b2b142b3030c36406e30e43`、`im-721a77dbef7efbb99e9ea4434e5d86b76de3936d22cbeb73f5a7fca8cf72abf0`、`im-79197462536a0f63d21e24e35ce7010d4dfd4b1b4abc1b74055fb33560140940`、`im-7209d9004391d8e5622adc778a1afe17fb4a934fbff3e1e87adf98530325229d`、`im-4cbe9fddc323617e8375623895a8fd8a969098e38c769971f8a422e4236ab0ab`、`im-91b57b7ae7eb1ad2392ebe907a852aef30206e1f5f9e981a7b29defbeb350202`、`im-4c834c2d863b2ce4dd19d0bd1f477017fa1b16048b081a1f8dc725441fcc9fc3`
+- 进展（2026-10-22 19:11）：维护者确认「1.4.1 有性能问题」，修复已合并到 main，只是尚未发版；也可直接从 main 安装（`im-0fb4365d9a0c0f6caf50125e7b113e21a5ffdf7b120f1822266636b77df55f7c`、`im-e1448036ffb46033f4e57f3a09716670768aff0a826975ff366ed6e1308c4fd8`、`im-7a9da70e1b07c1bccc99e63387561d8c75d65ec6957e5337b617e6fe545bd1e1`、`im-d487ea61af6332a312001649c15cdbd4b9c6c9eba17b8cdad08b32b201dbb9db`）。
 - 备注：可能与长会话/多 Bot 累积有关，未确认。2026-10-22 18:05 有用户在 1.5.0 上仍称「流畅度还有进一步突破的空间」，维护者回「性能有问题」（`im-134e6e51978ed35474c6d4dff5c74ee141f09b7b6c4ce3b7f2786bb8819182c1`、`im-5c41dd75bf701fa0d9f494ea11bf1c8aa90c91e1ec8526c003673e64cd1d83ba`）。用户补充「他们还在工作」「烧我的 token 和视频 API 以及 flow 积分」，怀疑卡顿与后台任务并行运行有关；用户称已自行提 issue，但本 Bot 未验证其 issue 内容。
 
 ---
@@ -371,4 +372,5 @@
 - 临时办法：未知；先跳过/直接进主界面。
 - 来源 Source Event ID：`im-36273f242b6e158a3b7224e7ebd4e59dcd7c1c4da8feec6173e20f456ba92bea`、`im-e0726b0cc226c6f3d837bf7fcfd2e4aeda6fb73abbb722f848b3a2c316314073`、`im-55e44783ae9dad20b2cfed4f905cb954d76e7b28800b077a7619f2acd409642b`
 - 备注：与「新版本引导能走完」的正面反馈并存，需要区分版本；建议收一次具体卡点截图。
+
 
