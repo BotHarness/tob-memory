@@ -307,7 +307,9 @@
 - 影响：用户丢失可用 Bot，被迫重装，记忆有丢失风险。
 - 临时办法：若只删了 Bot 而未清 Memory，可新建 Bot 后把旧 memory 目录内容拷入新 Bot 的 memory（路径在本地 bots/<botId>/memory），具体以实际安装位置为准。
 - 来源 Source Event ID：`im-6bde10fbeb00c252501aadebdee4292cbe7ff141a27abae18dc4a7b433607a8a`、`im-8c03287b050ee22aa16afdc14deaefa2e6ca505594ff8610a7e7dc271ce85bd6`、`im-3040e3329d219f7acced3b45b6d5fb230c7a3245341b9f42f3b613e3bf987f9b`、`im-690760a8d9d67ed5d25bcb79c2c6d06036b5ab0ad9bd961e038194203cfd4e6a`
+- 另：2026-10-22 14:22 同一用户补充「删除后无法解绑，希望有短暂恢复」（`im-e9e39e9f179b4836cb783fb04898eab3abc34f58ebf49c32f89dfc712c12e603`、`im-6f33e7f6ebe93f8f706eb73c11e4c5817d2998e202fb1407f22eed7382d3d9d6`），即删 Bot 后 IM 侧绑定未自动解除，属同一删除流程缺陷。
 - 备注：与 BUG-17（删除后残留）互为反面：删了该清的在、该留的没提示；待维护者确认「删除是否回收 Memory」的现有行为。
+
 
 
 
