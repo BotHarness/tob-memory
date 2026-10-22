@@ -104,6 +104,7 @@
 - 复现步骤：未知；需要长会话累积。
 - 影响：用户难以判断是网络、模型还是上下文问题，影响排障与信任。
 - 临时办法：重新开一个会话；群内提到 `/new` 在 PR 中，未确认正式版可用；另有先 compact 再闲置的优化讨论。
+- 另：2026-10-22 08:01 有用户报「我的智能体超过上下文就暴毙」，疑似同一溢出问题的更严重表现（`im-20392bbfd28f194df9eb94e9a0da61a0039c8c6b59fe1a1174a70323b1b93cc4`），版本未知，待确认是否 1.4.1。
 - 另：2026-10-21 13:15 有用户报「max-tokens」错误，未提供原文（`im-087b6cc589fd77aa9db5eec0c59cbf04f996000e635fee99f20d16650f6f5a86`）；已在群内请其补完整报错与版本，暂并入本条待补充。
 - 来源 Source Event ID：`im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7`、`im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01`（上下文/compact 讨论）、`im-ff5b2da860096eb346e3a7ecb4248e4052886b3e15e3c326e3a720075ec07c56`、`im-b03e957e7e9e46fa027cc4d0e09666292a79a1335ba12401ef9211b98d644a76`、`im-adedecac2d6bfdc3c1bb91c2a681ee1aa7971be7b17ef457fe064d762d0f5009`、`im-19dd5fd1c7df715d87c3319d9d582b80998c36540b987efed5d617978d6a8aa3`、`im-fb95002b92e9eebeadeda9eb5dd81725a6dc7a13b1c66ee54ae4be7e98be86ac`、`im-0a1a9bb662fcbc60107855c75149a4652e6723e360a7e08e862db075cb9f7bae`、`im-2681d796c9520e57034337670a973dd578ee2f669c60bc526b091b661dcb590d`（多用户补充：可能属 DSH、会话过长只能新开）
 - GitHub 提交状态：待提交。2026-10-19 07:30 在本轮去重搜索时 secret_cli 再次返回 `Select one live accepted IM source_event_id for private input`；按规则未循环重试，未开单。
@@ -259,4 +260,5 @@
 - 临时办法：暂无；等新版本。
 - 维护者回应：判断为性能问题且与刷新相关，「已经修复但是还没发新版」（`im-4c397e7316b90574b06a84ba6e97c3b7963d70fe1adcadc06ddd5d0484edc9ce`、`im-840a7ce7f6c55e91b5fbff1f841dfd1c2d8cebc076de4769e1598370164e8837`）。
 - 来源 Source Event ID：`im-a551bca192e2270a33102848fcd067cb3ec6ce00445982f7821e67b75785ce8e`
+
 
