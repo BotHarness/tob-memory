@@ -104,6 +104,7 @@
 - 复现步骤：未知；需要长会话累积。
 - 影响：用户难以判断是网络、模型还是上下文问题，影响排障与信任。
 - 临时办法：重新开一个会话；群内提到 `/new` 在 PR 中，未确认正式版可用；另有先 compact 再闲置的优化讨论。
+- 另：2026-10-22 14:13 有用户称「这个插件会导致上下文无法自动压缩」（`im-911ed99ab6cc05e0e32555a95e31db12ef02cce05d82f27ef900c26160150435`），未说明是哪个插件，未验证。
 - 另：2026-10-22 08:01 有用户报「我的智能体超过上下文就暴毙」，疑似同一溢出问题的更严重表现（`im-20392bbfd28f194df9eb94e9a0da61a0039c8c6b59fe1a1174a70323b1b93cc4`），版本未知，待确认是否 1.4.1。
 - 另：2026-10-21 13:15 有用户报「max-tokens」错误，未提供原文（`im-087b6cc589fd77aa9db5eec0c59cbf04f996000e635fee99f20d16650f6f5a86`）；已在群内请其补完整报错与版本，暂并入本条待补充。
 - 来源 Source Event ID：`im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7`、`im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01`（上下文/compact 讨论）、`im-ff5b2da860096eb346e3a7ecb4248e4052886b3e15e3c326e3a720075ec07c56`、`im-b03e957e7e9e46fa027cc4d0e09666292a79a1335ba12401ef9211b98d644a76`、`im-adedecac2d6bfdc3c1bb91c2a681ee1aa7971be7b17ef457fe064d762d0f5009`、`im-19dd5fd1c7df715d87c3319d9d582b80998c36540b987efed5d617978d6a8aa3`、`im-fb95002b92e9eebeadeda9eb5dd81725a6dc7a13b1c66ee54ae4be7e98be86ac`、`im-0a1a9bb662fcbc60107855c75149a4652e6723e360a7e08e862db075cb9f7bae`、`im-2681d796c9520e57034337670a973dd578ee2f669c60bc526b091b661dcb590d`（多用户补充：可能属 DSH、会话过长只能新开）
@@ -307,4 +308,5 @@
 - 临时办法：若只删了 Bot 而未清 Memory，可新建 Bot 后把旧 memory 目录内容拷入新 Bot 的 memory（路径在本地 bots/<botId>/memory），具体以实际安装位置为准。
 - 来源 Source Event ID：`im-6bde10fbeb00c252501aadebdee4292cbe7ff141a27abae18dc4a7b433607a8a`、`im-8c03287b050ee22aa16afdc14deaefa2e6ca505594ff8610a7e7dc271ce85bd6`、`im-3040e3329d219f7acced3b45b6d5fb230c7a3245341b9f42f3b613e3bf987f9b`、`im-690760a8d9d67ed5d25bcb79c2c6d06036b5ab0ad9bd961e038194203cfd4e6a`
 - 备注：与 BUG-17（删除后残留）互为反面：删了该清的在、该留的没提示；待维护者确认「删除是否回收 Memory」的现有行为。
+
 
