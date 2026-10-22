@@ -185,4 +185,9 @@
 - 附带发现：该 README 明确 DSH 0.2.1-rc.2 要求网关请求带调用方 `peer`，与 BUG-20261019-21 的漏 peer 报告相互印证。
 - 来源 Source Event ID：`im-0201ba4f3bf01f3d77ff539756403b3bd6355e3b985743555617895c07fc59ab`、`im-37694c8112de1c98a93f886cf8ec485ce48084fd27f7de12d8830d9c2725d221`
 
+## 路线图（2026-10-22 18:24 维护者口径）
+
+- DeepSeekBot 后续将**全部插件化**（everything is a plugin），组件可随意替换；目前仍有耦合问题待重构。
+- 与之相关的取舍：产品无法「既要又要」，UI 融合 vs 分离最终还是插件化来解（谁不喜欢就换）。
+- 来源 Source Event ID：`im-80263512febf69af903f6394299c2e7e5082e44b25416f299ba71627f96a6604`、`im-7c3b2bb52e08780ccacf2696ec2eb60ec8e21ee77a1dc24ffbb79cb65ce68672`、`im-0a3bb625af1626357c4f88dade08947da87fe48d014f945191430c0ead744250`、`im-7fbfcff7d3147ae809a4987fec106e7040aa21fd033fa5069edcbf112d5a7bea`
 
