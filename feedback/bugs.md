@@ -327,6 +327,18 @@
 - 另（2026-10-22 15:00）：本 Bot 两次尝试全量回读群历史均失败——`bridge_context` scope=group 返回 `provider-unavailable`，scope=retained 返回 `history-capability-unavailable`（`im-6c37fc685a3ab9d7c02cb3588af4a4023d7adaaf52a7e5ee4a6ff8019422ca56`）；即当前无法读未进入 Inbox 的普通消息，疑似同一桥接能力缺口。
 - 备注：复现条件已明确，属 dsh-im 入站丢失；建议先按此条件验证一次（引用 + @ 各一条对比），确认后再开 GitHub issue。
 
+---
 
+## BUG-20261019-21 dsh-im 网关请求漏 peer 对象，导致建不出会话并报 INTERNAL_UNKNOWN（社区定位＋本地补丁验证）
 
+- 状态：已定位（社区用户实测，非官方修复）；待上游确认
+- 首次报告：2026-10-22 15:02（Asia/Tokyo）
+- 现象：dsh-im 插件调用 DSH 0.2.1 网关接口时，请求体里漏了 `peer` 对象；宿主第一行校验直接读崩，抛 `Cannot read properties of undefined (reading 'signal')`，被包成 internal 错误，插件不认识该错误码就显示为 `INTERNAL_UNKNOWN`。表现为：QQ 消息能收到、能标记已读，但一条会话都建不出来。不修复则无法自定义工作路径，只能用插件默认路径。
+- 预期行为：宿主对缺失 peer 应给出可读的参数校验错误（而不是 undefined 崩溃）；插件应能识别并上报该错误码；配置自定义工作路径时应能正常建会话。
+- 版本与环境：DSH 0.2.1、dsh-im 插件；平台 QQ（Windows/Linux 待补）。
+- 复现步骤：在 dsh-im 配置自定义工作路径后收发消息；用 DSH inspector 在失败分支断点可抓到宿主栈与错误对象。
+- 影响：Bot 能收不能答（建不出会话），用户看到 `INTERNAL_UNKNOWN` 无从下手；与 BUG-18 的报错码同源。
+- 临时办法（社区补丁，非官方）：给插件 bundle 打两处补丁——① 把本地 owner peer 补进网关请求；② 让建会话强制走 `cwd` 分支；重启后 QQ 侧可正常建会话并回复。
+- 来源 Source Event ID：`im-2f2703dc3b18a086f570a3f02e4d2f9315bec14cd93c5c4207c182d395dead06`
+- 备注：与 BUG-18（INTERNAL_UNKNOWN）、BUG-19（持续出错→误删）可能同因；上游应修「宿主对缺 peer 的校验」与「插件错误码映射」两处，补丁方案只适合本地救急。
 
