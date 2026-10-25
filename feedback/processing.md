@@ -172,6 +172,17 @@
 - **2026-10-25 07:22：1.5.1 已上架**，维护者「等我发个公告」，公告将含 Android 与 iOS 的连接教程（`im-0ee4ee8df6d8757fd433560e2b5b1596d4c6e7e1fea4aaf36a4e67cadca4d54d`、`im-ebb8bb3ce590cf29ef988de201828e9047cfd28f6dc84b61cba55f7992b13013`）。
 - 来源 Source Event ID：`im-2d6fff0c3727a9a9a88e45b0a75b06561be5787f797cc76c1c0ab26e049fef62`、`im-e761f29ade572c03f468224b1771c9178aa77b65a4788c1118e6a44ca9c3829a`、`im-00e0b00061201d27b21c1275a81684889ac534d6c962ec7f23228bb843927364`、`im-a00705485b36d42a6f37961abf422272e5d3d3a17173cbb1e5eea7864310f2a9`、`im-ff32b714633b40a06ee499c33449916f69c49d009799470885918fbaa9d989e7`、`im-37ad04d1a77786a91a6d45171e032ecebb6fea597fd0a15d17087a85afed32a3`、`im-662b510cde33653ab7dbe431c88a2224f71062eed29fb9f66059a2e131464772`
 
+## 品牌与版本：DeepSeekBot 更名「托布 Tobs」，1.5.1 发布公告（2026-10-25 07:28）
+
+- 更名：DeepSeekBot（DSB）现称 **托布 Tobs**，意为 Team of Bots —— 让一群有各自身份、人格和记忆的 Bot 一起做事；旧 `deepseekbot` 安装包与命令继续支持。
+- 新装用 **@botharness/tobs**；已有用户按更新指南操作，保留 Bot、聊天与配对数据。
+- 文档：安装 https://tobs.app/docs/installation/ ，更新日志 https://tobs.app/changelog/ 。
+- 新增：Tobs Connect（手机与电脑同账号配对，无需 Tailscale）、多电脑聊天切换、存储空间管理、Bot 市场与插件更新、统一消息发送（含后台任务完成后唤醒 Bot 回报）。
+- 修复：长对话空闲卡顿与气泡重复渲染；发送/审批流程精简；后台任务完成未唤醒、长任务期间停止/追加指令被遮蔽；安装后命令行启动与 DSH 0.2.1 插件更新；Mac 组件安装失败提示。
+- 体验：回到底部按钮更清晰并显示新消息数；远程与本机聊天统一附件/审批/提问卡片；安装指引归并到固定页面。
+- 手机 App 单独发版，以测试渠道为准；内测群 1107784771，需提供系统（安卓/iOS）与可登录 Google Play 或 iOS 的邮箱。
+- 来源 Source Event ID：`im-b11daf4fc0bb103cf54460ba61206f41df14bdb3d8a2e68f49de2eeb5c335b08`
+
 ## 讨论纪要（2026-10-22 14:29-14:42，按维护者要求记录）
 
 - 授权体验：两位用户反馈「很多时候不能点始终允许」，需要反复回来点；维护者表示会查为什么。已在 SUG-20261019-02 留证。
