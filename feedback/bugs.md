@@ -503,3 +503,18 @@
 - 来源 Source Event ID：`im-989983a2ac1e869d87f8bfe8c5690cab1894f7078860b048441f735ff537cae4`（首报）、`im-2c22892114957c736bdc8f1186bdceb463947b97584d5f96a9608830efcd112d`（补充安卓 1.5.1、点开就崩）
 - GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/2787
 - 备注：与 BUG-27（全屏闪退）可能相关，但入口不同（这个是模型切换），先分开记。
+
+---
+
+## BUG-20261019-32 「完整环境备份与恢复」被 DSH 0.2.0-rc.1 版本硬门禁阻断（外部 issue #2790）
+
+- 状态：上游已开 issue，OPEN（本人未复现，属转引外部报告）
+- 首次报告：2026-10-25 14:13（GitHub issue 创建时间，Asia/Tokyo）
+- 现象：Tobs 1.5.2 + DSH 桌面端 0.2.1-rc.3 下，Bot 设置 → 数据与隐私 → 完整环境备份与恢复 → 管理备份 → 预览导出，立即报 `操作未完成（dependency-incompatible）`；无预览计数、无下载按钮、磁盘无写入。
+- 根因（报告者读 1.5.2 包内代码）：`profileBackupPreview()` 把宿主版本写死为 `0.2.0-rc.1`，不符即抛 `dependency-incompatible`；同一字面量还出现在 manifest schema、导入校验、导出 manifest 共四处，因此非 rc.1 环境既不能导出也不能导入。报告者另称上游 `main` 仍未修，PR #2719 只放开了安装/启动准入。
+- 影响：0.2.1-rc.x 用户整块备份功能不可用；且错误码像数据损坏，容易误判为备份文件坏了。
+- 预期：备份门禁应与准入策略一致（如 `>=0.2.0-0`），或明确只支持 rc.1 并写进 README 与 UI 文案。
+- 临时办法：暂无；如需备份，只能暂时回到 DSH 0.2.0-rc.1 环境。
+- 来源：GitHub issue https://github.com/BotHarness/DeepSeekBot/issues/2790 ；群内转达 `im-87c4d8c77298821d6a55df889106031cae02549c93624a278bb8f3a8bd6a1737`
+- 备注：本条按群内要求「查看 issue」所做的摘要，未在本地环境复验。
+
