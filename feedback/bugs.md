@@ -473,3 +473,17 @@
 - 来源 Source Event ID：`im-475ac0b3c0d8bf84251177a7020cd1fe081b1d625ec5f6de94a28c1a6cd17f4e`、`im-b535b3c55c54307485c067de92b52fdae94c6e3c68a0627878508d7c19daad0c`、`im-f4cef2166947fd5fdfe1ecd9cc2e13f4b737663335d3fbfbbd78639bc07a894d`、`im-0ffa8644015bb41375dda071963bb05224cc49f6afe60386defbaa614d8f01e0`、`im-0602c1c2fc13dbf91d0edd00ae4719acb751f909d4f387a626aadada723af10b`、`im-68cb2040aa9bc207a864e83e8a50f4ce1f55e281b4d7c73e7392a6c7c032a79a`
 - 备注：与 BUG-20（消息进不了 Inbox）、BUG-26（回复没回传）是三个不同位置；本条落在「已进箱但没答复/答复未呈现」。
 
+---
+
+## BUG-20261019-30 手机端表格渲染溢出被裁切（overflow clip）
+
+- 状态：维护者指定记录（待补截图与设备）
+- 首次报告：2026-10-25 13:21（Asia/Tokyo，QQ 群 `266C3D7BF7909A937A654929802F076C`）
+- 现象：移动端渲染表格时内容溢出，被 clip 掉，即超出宽度的列看不到、也无法横向滑动查看。
+- 预期行为：窄屏下表格应可横向滚动，或折行/卡片化呈现，不能静默截断内容。
+- 版本与环境：待补（手机系统、App 版本、是否 TestFlight 包）。
+- 复现步骤：在手机端让 Bot 输出一个较宽的表格（列多或单列内容长），观察右侧是否被裁切。
+- 影响：移动端读表格类回答时信息丢失。
+- 临时办法：暂无；可让 Bot 用列表或短表代替宽表。
+- 来源 Source Event ID：`im-022e9c66f23911edea96ccb0a377b2dc1528dca2e529d516da2a685d2b0e6f8c`
+
