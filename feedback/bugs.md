@@ -107,7 +107,6 @@
 - 另：2026-10-22 14:13 有用户称「启动这个插件会导致上下文无法自动压缩」，随后指认为插件 `billion context`（`im-911ed99ab6cc05e0e32555a95e31db12ef02cce05d82f27ef900c26160150435`、`im-a8241962b3b70cd854b55847ec380300a2bf871c9d90132abf16d93033e13395`、`im-d5900589fc9e6b361a1ae6aef9bfb3b913f45138ce78f9f55aa13d2dcf1bf55c`、`im-4e02341973a11deaf1ea16ab66295ba482a3ce46b1e265ce0b56ae9ac79e82f9`）；第三方插件。维护者指出：用的是 dsh 原始 session，插件若仅加工具/读上下文不该影响压缩，因此「插件与压缩互斥」只是待验证假设，需开关对比后才能定性（`im-0a3f77609c57b99628724211ee70717d687526ea94a21a9b8d37fd587a870483`）。
 - 另：2026-10-22 08:01 有用户报「我的智能体超过上下文就暴毙」，疑似同一溢出问题的更严重表现（`im-20392bbfd28f194df9eb94e9a0da61a0039c8c6b59fe1a1174a70323b1b93cc4`），版本未知，待确认是否 1.4.1。
 - 另：2026-10-24 05:23 有用户贴出完整报错：「本轮运行失败 对话上下文已满 CONTEXT_WINDOW_EXCEEDED / 自动压缩未能恢复。请缩小请求后重试」；运行来源 Orchestrator，模型 `deepseek-v4.1-flash`，宿主标识 `botharness-e4295add-3bf8-4f54-b03e-122484b7b256`，界面只有「重试这条消息」，重试无效（`im-f294c64423f020489b01eda28cdca7e4bb6885f42bb6ce895c80dc9521c64cb2`）。说明 1.4.1 的提示虽已出现，但「自动压缩未能恢复」时仍缺少新开会话等可操作出口。
-- 2026-10-25 补充：本地数据库损坏报错 `OperationalDatabaseError: Operational database is in recovery mode: integrity-failed`，界面同时出现「名册加载失败」「活动同步已中断」「还没有 Bot」，并弹「重新检查并继续」；同期用户口语称「连不上了」、以为机器人没额度（`im-33b59cd97ca111f100c18d052ba70ff6ced3e28443c89b02236a38de2e149da6` 含截图，独立副本存 Grant `28285c17-da89-4aa2-a874-e5f5f31f9606` 的 `.botharness/qq-source-1023/AC29208AA223DECC439B2022F0037A80.png`）。此条属数据库层故障，非上下文溢出，单列待维护者确认修复路径（建议先备份 botharness.db 及 -wal/-shm，再走 .recover）。
 - 另：2026-10-21 13:15 有用户报「max-tokens」错误，未提供原文（`im-087b6cc589fd77aa9db5eec0c59cbf04f996000e635fee99f20d16650f6f5a86`）；已在群内请其补完整报错与版本，暂并入本条待补充。
 - 来源 Source Event ID：`im-83df7e2719ee453810af1ed51128c0791346aacee347d74c4964881cf70f1ee7`、`im-0f08c7cdf1766d6ade381a45d010fc31476bcccecea73898ebb22597e44afe01`（上下文/compact 讨论）、`im-ff5b2da860096eb346e3a7ecb4248e4052886b3e15e3c326e3a720075ec07c56`、`im-b03e957e7e9e46fa027cc4d0e09666292a79a1335ba12401ef9211b98d644a76`、`im-adedecac2d6bfdc3c1bb91c2a681ee1aa7971be7b17ef457fe064d762d0f5009`、`im-19dd5fd1c7df715d87c3319d9d582b80998c36540b987efed5d617978d6a8aa3`、`im-fb95002b92e9eebeadeda9eb5dd81725a6dc7a13b1c66ee54ae4be7e98be86ac`、`im-0a1a9bb662fcbc60107855c75149a4652e6723e360a7e08e862db075cb9f7bae`、`im-2681d796c9520e57034337670a973dd578ee2f669c60bc526b091b661dcb590d`（多用户补充：可能属 DSH、会话过长只能新开）
 - GitHub 提交状态：待提交。2026-10-19 07:30 在本轮去重搜索时 secret_cli 再次返回 `Select one live accepted IM source_event_id for private input`；按规则未循环重试，未开单。
@@ -375,4 +374,18 @@
 - 来源 Source Event ID：`im-36273f242b6e158a3b7224e7ebd4e59dcd7c1c4da8feec6173e20f456ba92bea`、`im-e0726b0cc226c6f3d837bf7fcfd2e4aeda6fb73abbb722f848b3a2c316314073`、`im-55e44783ae9dad20b2cfed4f905cb954d76e7b28800b077a7619f2acd409642b`
 - 备注：与「新版本引导能走完」的正面反馈并存，需要区分版本；建议收一次具体卡点截图。
 
+---
+
+## BUG-20261019-24 本地数据库完整性校验失败（integrity-failed），名册加载失败、Bot 全部消失
+
+- 状态：用户报告（有截图；根因待维护者确认）
+- 首次报告：2026-10-25（用户于 10-23 06:45 首次贴图，报入口语为「连不上」「是不是没额度了」）
+- 现象：提示「活动同步已中断，头像显示的是最后一次观察到的状态，正在重新连接…」；左侧「名册加载失败：Operational database is in recovery mode: integrity-failed」；活动中心两处均报 `OperationalDatabaseError: Operational database is in recovery mode: integrity-failed` 并带「重试」；主区显示「还没有 Bot」；底部 toast 同错误 +「重新检查并继续」。
+- 预期行为：数据库异常时应给出可操作指引（备份路径、修复方式），不应表现为 Bot 全部消失或连接中断。
+- 版本与环境：未知（中文桌面端；版本、平台、磁盘状况待补）。
+- 复现步骤：未知；疑似异常退出/断电或磁盘写入错误导致 SQLite 完整性校验失败。
+- 影响：Bot 名册与活动全部不可用，用户误判为「连不上」或额度耗尽。
+- 临时办法：先不要删库。退出应用后完整备份数据目录（botharness.db 及 -wal/-shm、logs.db），再走 `sqlite3 .recover` 或 DSH 修复流程；备份后再点「重新检查并继续」。
+- 来源 Source Event ID：`im-33b59cd97ca111f100c18d052ba70ff6ced3e28443c89b02236a38de2e149da6`（含截图，独立副本在 Grant `28285c17-da89-4aa2-a874-e5f5f31f9606` 的 `.botharness/qq-source-1023/AC29208AA223DECC439B2022F0037A80.png`）
+- 备注：同期多人称「连不上」「出 bug 了」，暂未见独立根因，先各自归本条与 BUG-22。
 
