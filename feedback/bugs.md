@@ -522,13 +522,14 @@
 
 ## BUG-20261019-33 手机端关闭再打开 VPN 后需重新与电脑配对才能连上
 
-- 状态：用户报告（现象明确；版本与日志待补）
+- 状态：用户报告，已开 issue #2810
 - 首次报告：2026-10-25 17:06（Asia/Tokyo，QQ 群 `266C3D7BF7909A937A654929802F076C`）
 - 现象：手机端关闭 VPN 再重新开启后，Tobs Connect 连不上，必须和电脑端重新配对才能恢复。
 - 预期行为：配对关系应与临时网络变化解耦；网络切换（VPN 开关、Wi-Fi/蜂窝切换）后应自动重连，最多需要重试，而不是重新配对。
 - 影响：每次切 VPN 都要重新配对，实际使用中相当于断线；对常开代理的用户很致命。
 - 临时办法：保持 VPN 常开，避免中途开关；或固定同一出口后再配对。
 - 推测方向（未验证）：配对可能绑定了当时的连接地址/会话密钥，出口 IP 变化即失效；也可能握手超时后未自动重新协商。
-- 版本与环境：待补（手机系统、App 版本、是否 TestFlight 包、VPN 类型）。
-- 来源 Source Event ID：`im-8437302d97afe7603b50d5c7e30a73938f26abb9f7d904cf9a795a1f0d7afe1d`
+- 版本与环境：Android，App 1.5.2；VPN 为第三方「机场」订阅（2026-10-25 17:08 用户补充）。
+- 来源 Source Event ID：`im-8437302d97afe7603b50d5c7e30a73938f26abb9f7d904cf9a795a1f0d7afe1d`（首报）、`im-64ce167b4d3f7afa5fbe540fb59e53e09cab166fce151f83724cac9e855a71f5`（Android 1.5.2、机场 VPN）
+- GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/2810
 
