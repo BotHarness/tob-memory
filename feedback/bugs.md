@@ -628,3 +628,18 @@
 - 结论（2026-10-26 22:23）：即便用 `--from-default-profile` 建的全新 rescue profile（无 patch 报错、模型正常），建 Bot 仍报同一句 never started；`--dump-config` 里 `tool-subagent-control` 确实存在。故排除用户侧配置与缺包，判定为源码版 DSH 的真实缺陷。
 - GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/2932
 - 规避：改用 npm 安装的 DSH 发行版，而不是源码 checkout。
+
+---
+
+## BUG-20261019-38 iOS 切后台再回来自动空白、点进会话无限闪屏
+
+- 状态：用户报告（现象清楚；版本待补）
+- 首次报告：2026-10-26 23:52（Asia/Tokyo，QQ 群 `266C3D7BF7909A937A654929802F076C`）
+- 现象：iOS 端把 App 切到后台再切回来，整个聊天窗口空白；此时点「托布」进入会话会无限闪屏；必须退回主界面、重新进入托布才恢复正常。
+- 预期：从后台恢复时保持原会话与滚动位置；渲染异常时应提示重载，而不是空白或闪屏循环。
+- 影响：切出去回个消息就得重启 App 才能用，多任务场景基本不可用。
+- 可能方向（未验证）：恢复时视图尺寸/测量失效（近期有 #2845「preserve measured chat dimensions after initial placement」在途）、或导航栈在恢复时反复重建（#2832 清理陈旧导航）。
+- 临时办法：退到主界面再进托布。
+- 版本与环境：iOS；App 版本待补（是否 TestFlight/正式版、系统版本）。
+- 来源 Source Event ID：`im-588e185efc08d8871c036ecec19ecfb5e5960e85ce2e8f35a348558fdd8a2f30`
+
