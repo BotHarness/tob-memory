@@ -622,3 +622,6 @@
 - 来源 Source Event ID：`im-2472f389d5a7c331fbeb886cf00af2df21dbc1ce9b679ddbbe3145b283dee641`、`im-4979e401f9aab368cce3f6b2eb25c6ef5460fd98842246ac9de98a9c2ddea2ef`
 - 附加发现（2026-10-26 21:28，同一用户贴日志）：源码构建 `pnpm i && pnpm -r build` 在 pnpm 11 下报 `ERR_PNPM_TASK_CYCLE`（工作区构建任务成环，apps/cli→sdk/client→apps/cli 等多组），提示 `ignoreWorkspaceCycles`。**这不等于 never started 的根因**，但会让源码路线走不通；已建议加 `ignoreWorkspaceCycles: true` 或改用顶层 build 脚本。
 - 环境补充：Windows（win32 x64），仓库路径形如 `F:\aiAgent\deepseek-harness`。
+- 进一步排查（2026-10-26 22:14，同一用户）：`dsh --profile web --dump-config` 显示 `tool-subagent-control` 已挂载（且重复出现多次），所以不是缺包，而是启动失败。同一次 dump 还暴露出 profile 的 `cordis.patch.yml` 有大量过期补丁报错：`ui-theme` 名称不匹配（期望 `@botharness/tobs/desktop-theme/lib/index.js`，实际是 `@deepseek-ai/dsh-client-ui-theme`），以及 `redteam-store`、`redteam-ui`、`redteam-mode`、`dsh-purge`、`bili-native`、`dsh-session-manager`、`dsh-flow`、`import-claude`、`docker` 等 entry 找不到。
+- 推测：过期 patch 与本地源码构建混用，可能连带影响插件启动；建议先清理 patch 或 `dsh rescue --from-default-profile web` 重建后再复测。
+- 环境补充：Windows，profile 在 `C:\Users\<user>\.dsh\profiles\web`，源码在 `F:\aiAgent\deepseek-harness`。
