@@ -550,3 +550,18 @@
 - 来源 Source Event ID：`im-0f707cfdde1131482880db57993a21bd04dfe586ac9f3487b7136cd42a690959`
 - GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/2849 （正文草稿保留在 `.botharness/issue-bodies/db-integrity.md`）
 - 过程备注：首次提交时 gh 连续 4 次报 `Select one live accepted IM source_event_id for private input`，一小时后重试成功；与 BUG-05/#2290 同族故障。
+
+---
+
+## BUG-20261019-35 任务执行到一半停住，需要重新 @ 才继续
+
+- 状态：用户报告（现象明确；版本与日志待补）
+- 首次报告：2026-10-26 08:49（Asia/Tokyo，QQ 群）
+- 现象：用户称 Bot「老是改一半就不动了」，必须重新 @ 它、再讲一遍才会继续。
+- 预期行为：任务应连续执行到结束或明确失败；若被审批/超时/中断挡住，应有可见状态（等待审批、已超时、需要确认），而不是静默停住。
+- 影响：用户需要反复 @ 与复述，既浪费 token 也容易打断改动，半成品状态还会留在文件里。
+- 可能方向（未验证）：等待审批时被挂起、工具调用超时后回合结束、长任务被后续消息截断、或模型自己提前收尾。
+- 临时办法：重新 @ 并在指令里补「继续，不要停」；避免长任务一口气到底，拆成小步。
+- 版本与环境：待补。
+- 来源 Source Event ID：`im-1343bc84b910b2c13de7ae37eb5df969bf051d2c6e6903fe19664e390f4f5e75`
+
