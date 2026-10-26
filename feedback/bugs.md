@@ -620,4 +620,5 @@
 - 关联：#2727（完全访问下委托子代理被静默拦截）同族，但本条卡在工具启动而非权限边界；#2790 也显示 1.5.2 对 rc.3 存在版本门禁类问题。
 - 版本与环境：DSH 0.2.1-rc.3、Tobs 1.5.2，平台 Discord/桌面端（OS 待补）。
 - 来源 Source Event ID：`im-2472f389d5a7c331fbeb886cf00af2df21dbc1ce9b679ddbbe3145b283dee641`、`im-4979e401f9aab368cce3f6b2eb25c6ef5460fd98842246ac9de98a9c2ddea2ef`
-
+- 附加发现（2026-10-26 21:28，同一用户贴日志）：源码构建 `pnpm i && pnpm -r build` 在 pnpm 11 下报 `ERR_PNPM_TASK_CYCLE`（工作区构建任务成环，apps/cli→sdk/client→apps/cli 等多组），提示 `ignoreWorkspaceCycles`。**这不等于 never started 的根因**，但会让源码路线走不通；已建议加 `ignoreWorkspaceCycles: true` 或改用顶层 build 脚本。
+- 环境补充：Windows（win32 x64），仓库路径形如 `F:\aiAgent\deepseek-harness`。
