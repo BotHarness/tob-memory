@@ -20,6 +20,7 @@
 - 备注：无法区分是平台侧吞消息、发送端问题还是接收链路丢正文；未做复现验证，不得当作已确认缺陷。
 
 ---
+- 2026-10-26：维护者要求为缺单的 QQ 问题补 issue，已写好三条聚合正文（`.botharness/issue-bodies/qq-inbound-loss.md` 覆盖 BUG-01+20、`dshim-peer.md` 覆盖 BUG-21、`qq-429-and-mentions.md` 覆盖 BUG-07+10）；提交时 gh 连续三次报 `Select one live accepted IM source_event_id for private input`，待重试。
 
 ## BUG-20261019-02 安装后找不到返回普通 Harness 的入口（维护者称已修复，待用户复验）
 
@@ -129,6 +130,7 @@
 - 备注：可能是自建反代或上游限流所致，未确认属 DSB 缺陷；先记待补充，不公开开单。
 
 ---
+- 2026-10-26：维护者要求为缺单的 QQ 问题补 issue，已写好三条聚合正文（`.botharness/issue-bodies/qq-inbound-loss.md` 覆盖 BUG-01+20、`dshim-peer.md` 覆盖 BUG-21、`qq-429-and-mentions.md` 覆盖 BUG-07+10）；提交时 gh 连续三次报 `Select one live accepted IM source_event_id for private input`，待重试。
 
 ## BUG-20261019-08 Bot 模式消息长时间卡住，审批提示在 DSH 主界面不可见（用户报告，待补充）
 
@@ -176,6 +178,7 @@
 - 备注：维护者说明这是设计——Bot 收到 Inbox 信息后由模型自行判断是否回复，也可以只读不回；另有「选择成员提醒策略」文档。用户预期是「仅 @ 才唤醒」，两者不一致，可能是文档/默认值表达问题。先记录待补充，待文档落地与默认策略明确后再判定是否转为文档改进。
 
 ---
+- 2026-10-26：维护者要求为缺单的 QQ 问题补 issue，已写好三条聚合正文（`.botharness/issue-bodies/qq-inbound-loss.md` 覆盖 BUG-01+20、`dshim-peer.md` 覆盖 BUG-21、`qq-429-and-mentions.md` 覆盖 BUG-07+10）；提交时 gh 连续三次报 `Select one live accepted IM source_event_id for private input`，待重试。
 
 ## BUG-20261019-11 通过 Bot 新建 Bot/群聊后，界面需重启才显示（用户报告，待补充）
 
@@ -335,6 +338,7 @@
 
 ---
 - 旁证（2026-10-24 02:52-02:57，QQ 群）：用户绑定好 Bot 角色、能在页面内正常对话后，仍报「私聊机器人没有反应，但是测试通过」「机器人发信息，dsh bot 智能体接收不到信息」，群友回复「好了基本可以确定是我昨天发现的 bug」；同时有人报「bot 页面也没提示思考」「目前插件的最近 workbuddy 都不行了」。说明私聊通道丢消息不只发生在「引用+@」组合上，普通私聊也可能进不来，需与 BUG-25 的绑定流程区分（`im-0c66532fe25d2172f2f7009cdeafd658406ac22e7292ac9182b499b67f80f7fb`、`im-628c88325a41039695b363da459f92b554007f632a375eb16ea21c512ce28f25`、`im-9bd94673632c87d5adcdbae5ce5bb723a2e75766ab0b9a33c4226b6224780e8e`、`im-3a4629f432490b51255cf7201d7b9a95977a6a6b735ec40dc54b1816f5c359e8`、`im-7afe00d4d5115aa94f8ec7571d413f928095753f1b279e98f7c39a930f95f0e3`）。
+- 2026-10-26：维护者要求为缺单的 QQ 问题补 issue，已写好三条聚合正文（`.botharness/issue-bodies/qq-inbound-loss.md` 覆盖 BUG-01+20、`dshim-peer.md` 覆盖 BUG-21、`qq-429-and-mentions.md` 覆盖 BUG-07+10）；提交时 gh 连续三次报 `Select one live accepted IM source_event_id for private input`，待重试。
 
 ## BUG-20261019-21 dsh-im 网关请求漏 peer 对象，导致建不出会话并报 INTERNAL_UNKNOWN（社区定位＋本地补丁验证）
 
@@ -350,6 +354,7 @@
 - 备注：与 BUG-18（INTERNAL_UNKNOWN）、BUG-19（持续出错→误删）可能同因；上游应修「宿主对缺 peer 的校验」与「插件错误码映射」两处，补丁方案只适合本地救急。
 
 ---
+- 2026-10-26：维护者要求为缺单的 QQ 问题补 issue，已写好三条聚合正文（`.botharness/issue-bodies/qq-inbound-loss.md` 覆盖 BUG-01+20、`dshim-peer.md` 覆盖 BUG-21、`qq-429-and-mentions.md` 覆盖 BUG-07+10）；提交时 gh 连续三次报 `Select one live accepted IM source_event_id for private input`，待重试。
 
 ## BUG-20261019-22 飞书与微信同时联系不到 Bot，连接莫名中断（用户报告，待补充）
 
