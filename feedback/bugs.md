@@ -382,7 +382,7 @@
 
 ## BUG-20261019-24 本地数据库完整性校验失败（integrity-failed），名册加载失败、Bot 全部消失
 
-- 状态：用户报告（有截图；根因待维护者确认）
+- 状态：用户报告（有截图；根因待维护者确认）；**2026-10-26 维护者要求开 issue，gh 凭据通道连续 4 次返回「Select one live accepted IM source_event_id for private input」，未能提交，issue 正文已备**
 - 首次报告：2026-10-25（用户于 10-23 06:45 首次贴图，报入口语为「连不上」「是不是没额度了」）
 - 现象：提示「活动同步已中断，头像显示的是最后一次观察到的状态，正在重新连接…」；左侧「名册加载失败：Operational database is in recovery mode: integrity-failed」；活动中心两处均报 `OperationalDatabaseError: Operational database is in recovery mode: integrity-failed` 并带「重试」；主区显示「还没有 Bot」；底部 toast 同错误 +「重新检查并继续」。
 - 预期行为：数据库异常时应给出可操作指引（备份路径、修复方式），不应表现为 Bot 全部消失或连接中断。
@@ -547,4 +547,4 @@
 - 待补：DSH 崩溃前的日志、Bot 当时执行的具体命令；用户称会补截图。
 - 补充（2026-10-25 18:39）：手机端报错为「连不上」，DSH 报错为「无法新建会话」，codex 修的是「本地的状态库」——指向本地状态/数据库损坏，与 BUG-24（integrity-failed）同族，但本条损坏形态不同（不是恢复模式提示），仍需日志确认（`im-7225342a7edc326d5b5459a967b6fc078c85dffad6075df6e4f792ebf90007c1`、`im-e74390770751ec8225a0fbc418fd05a9a837f0e51b6b6087a99c61c1e7d548a6`）。
 - 来源 Source Event ID：`im-0f707cfdde1131482880db57993a21bd04dfe586ac9f3487b7136cd42a690959`
-
+- issue 草稿：`.botharness/issue-bodies/db-integrity.md`（含两条报告合并：恢复模式 + 重启后无法新建会话）
