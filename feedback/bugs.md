@@ -611,7 +611,7 @@
 
 ## BUG-20261019-37 Tobs 1.5.2 + DSH 0.2.1-rc.3 下建 Bot 失败，子代理工具 never started
 
-- 状态：用户报告（有错误详情文本；待复现环境确认）
+- 状态：用户报告，已开 issue #2932（干净 rescue profile 仍复现）
 - 首次报告：2026-10-26 21:11-21:16（Asia/Tokyo，Discord #中文交流）
 - 现象：新装环境（DSH 0.2.1-rc.3、DeepSeekBot/Tobs 1.5.2）里发「帮我创建一个 Bot」，Bot 回「本轮运行失败 请查看错误详情」；错误详情报：`运行来源：Orchestrator`、`tool-subagent-list-agents (@deepseek-ai/dsh-tool-subagent-control/list-agents): never started`。
 - 解读：Orchestrator 调用子代理工具时工具未启动即结束，不是模型拒绝；指向 `@deepseek-ai/dsh-tool-subagent-control` 未启用或与 DSH rc.3 版本不匹配。
@@ -625,3 +625,6 @@
 - 进一步排查（2026-10-26 22:14，同一用户）：`dsh --profile web --dump-config` 显示 `tool-subagent-control` 已挂载（且重复出现多次），所以不是缺包，而是启动失败。同一次 dump 还暴露出 profile 的 `cordis.patch.yml` 有大量过期补丁报错：`ui-theme` 名称不匹配（期望 `@botharness/tobs/desktop-theme/lib/index.js`，实际是 `@deepseek-ai/dsh-client-ui-theme`），以及 `redteam-store`、`redteam-ui`、`redteam-mode`、`dsh-purge`、`bili-native`、`dsh-session-manager`、`dsh-flow`、`import-claude`、`docker` 等 entry 找不到。
 - 推测：过期 patch 与本地源码构建混用，可能连带影响插件启动；建议先清理 patch 或 `dsh rescue --from-default-profile web` 重建后再复测。
 - 环境补充：Windows，profile 在 `C:\Users\<user>\.dsh\profiles\web`，源码在 `F:\aiAgent\deepseek-harness`。
+- 结论（2026-10-26 22:23）：即便用 `--from-default-profile` 建的全新 rescue profile（无 patch 报错、模型正常），建 Bot 仍报同一句 never started；`--dump-config` 里 `tool-subagent-control` 确实存在。故排除用户侧配置与缺包，判定为源码版 DSH 的真实缺陷。
+- GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/2932
+- 规避：改用 npm 安装的 DSH 发行版，而不是源码 checkout。
