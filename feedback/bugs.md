@@ -606,3 +606,18 @@
 - 版本与环境：待补（App 版本、清理入口、单次条数、是否群聊与私聊都失败）。
 - 来源 Source Event ID：`im-28490afba04c27188607a1ae64b84b1a4acb77aac3fdab48ae44ee5b4fd0afb6`
 - GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/2873
+
+---
+
+## BUG-20261019-37 Tobs 1.5.2 + DSH 0.2.1-rc.3 下建 Bot 失败，子代理工具 never started
+
+- 状态：用户报告（有错误详情文本；待复现环境确认）
+- 首次报告：2026-10-26 21:11-21:16（Asia/Tokyo，Discord #中文交流）
+- 现象：新装环境（DSH 0.2.1-rc.3、DeepSeekBot/Tobs 1.5.2）里发「帮我创建一个 Bot」，Bot 回「本轮运行失败 请查看错误详情」；错误详情报：`运行来源：Orchestrator`、`tool-subagent-list-agents (@deepseek-ai/dsh-tool-subagent-control/list-agents): never started`。
+- 解读：Orchestrator 调用子代理工具时工具未启动即结束，不是模型拒绝；指向 `@deepseek-ai/dsh-tool-subagent-control` 未启用或与 DSH rc.3 版本不匹配。
+- 预期：工具缺失/版本不兼容时应给出明确错误（缺哪个包、要什么版本），而不是「never started」后整轮失败。
+- 临时办法（待验证）：把该工具包更新到与 rc.3 对应的版本；或暂时把 DSH 降到与 1.5.2 验证过的版本。
+- 关联：#2727（完全访问下委托子代理被静默拦截）同族，但本条卡在工具启动而非权限边界；#2790 也显示 1.5.2 对 rc.3 存在版本门禁类问题。
+- 版本与环境：DSH 0.2.1-rc.3、Tobs 1.5.2，平台 Discord/桌面端（OS 待补）。
+- 来源 Source Event ID：`im-2472f389d5a7c331fbeb886cf00af2df21dbc1ce9b679ddbbe3145b283dee641`、`im-4979e401f9aab368cce3f6b2eb25c6ef5460fd98842246ac9de98a9c2ddea2ef`
+
