@@ -18,6 +18,19 @@
 | 选用理由 | 与「蓝色大肥鱼 DeepSeek 表情包」查询直接相关，点赞语义适合群内交流；未修改、未加字 |
 | 时间 | 2026-10-19 04:31（Asia/Tokyo），维护者要求实际执行公开搜图任务 |
 
+## deepseek-chan-thinking.gif / deepseek-chan-gaming.gif
+
+| 项目 | 内容 |
+| --- | --- |
+| 文件 | `media/qq/public/deepseek-chan-thinking.gif`、`media/qq/public/deepseek-chan-gaming.gif` |
+| 实际格式 | 均为 GIF89a，500 × 500；thinking 3,195,718 字节，gaming 2,399,010 字节 |
+| 画面（read_image 实测） | thinking：蓝色长发 Q 版少女，眉心有黑色圈环纹理饰物，半垂眼、眼神放空、手托下巴，蓝白女仆装。gaming：同角色，双手握着白色手柄，粗眉、圆眼、脸上有红点，像紧张专注打游戏 |
+| 来源仓库 | https://github.com/BrickAZ/deepseek-chan-emotes |
+| 直接下载地址 | https://raw.githubusercontent.com/BrickAZ/deepseek-chan-emotes/main/previews/thinking.gif 、 https://raw.githubusercontent.com/BrickAZ/deepseek-chan-emotes/main/previews/gaming.gif |
+| 角色来源 / 署名 | 蓝色大肥鱼 — Steam 创意工坊 https://steamcommunity.com/sharedfiles/filedetails/?id=3807575879 （作者：飞天豆之助）；EmoteLab 制作 https://emotelab.app/ ；再分享保留署名，不宣称原创 |
+| 用途 | thinking：排查卡住、想问题时用；gaming：等长任务跑完、或调侃群里高强度操作时用 |
+| 时间 | 2026-10-26 23:55（Asia/Tokyo），维护者要求实际执行公开搜图与表情包场景说明 |
+
 ## 说明
 
 - 搜索使用 web_search / web_fetch；实际下载用 curl 在已授权工作区 `/opt/botharness/seo-tutorial/feedback-media` 下完成，未放宽会话沙箱。
