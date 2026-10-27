@@ -661,4 +661,4 @@
 - 影响：授权是本产品的必经步骤，卡几分钟会让人以为卡死；配合 BUG-28（权限静默收窄）更容易让用户放弃设置权限。
 - 版本与环境：待补（App 版本、操作系统、D 盘是否机械盘/网络盘）。
 - 来源 Source Event ID：`im-8b70d8fbb8e54c2c8ca1838cd23de31ebddd30570077222f41bd7b1ee0b50460`
-
+- 2026-10-27 04:57：维护者要求确保最新四条都有 issue。BUG-37→#2932、BUG-38→#2933、BUG-35→#2872 已确认；本条提交时 gh 连续三次报 `Select one live accepted IM source_event_id for private input`，未提交成功，正文存 `.botharness/issue-bodies/folder-picker-slow.md`，待重试。
