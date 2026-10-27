@@ -690,4 +690,4 @@
 - 版本与环境：待补（App 版本、Bot 当前访问设置是 workspace-write 还是 danger-full-access）。
 - 来源 Source Event ID：`im-a502600e9d7d6b1baf469fcaf1bd32d4339ba1dd956fecf0561d8447a993d447`、`im-fd181c5c54358b3822d6b36f25e5fdeb4edc493ff17c7356c6814c76bcd975b6`
 - 复现加强（2026-10-27 14:42）：用户确认此后每次发消息都报同一个错（`im-17918b03e84231bc79c52136a670f804db08e66986fbcbed23131e238d5ef90e`），不是一次性故障。
-
+- 维护者结论（2026-10-27 16:09）：@ 报告者称「下一个版本修复 1.6.0」（`im-a9dd85612739d23e395362bedbdab353913f874415a8db2fd19bcd603d734822`）。
