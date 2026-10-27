@@ -654,7 +654,7 @@
 
 ## BUG-20261019-39 给 Bot 授权工作区时，目录选择器卡好几分钟才出列表
 
-- 状态：用户报告（有截图；版本待补）
+- 状态：用户报告，已开 issue #2939（正文由维护者手动建单的备选仍在）
 - 首次报告：2026-10-27 02:43（Asia/Tokyo，QQ 群）
 - 现象：在「授权 Bot 访问某个文件夹」的对话框里，切到 `D:\` 之后列表长时间是空的/骨架占位，要等好几分钟才正常显示；用户确认此时任务管理器里 CPU 与内存都没爆满，排除资源打满。
 - 观察（据截图）：选择器提供盘符 tab（主目录 / C: / D: / E: / F: / Z:）、路径输入 + 「前往」、文件夹列表、「显示隐藏文件夹」开关。卡点在列表加载。
@@ -664,3 +664,4 @@
 - 版本与环境：待补（App 版本、操作系统、D 盘是否机械盘/网络盘）。
 - 来源 Source Event ID：`im-8b70d8fbb8e54c2c8ca1838cd23de31ebddd30570077222f41bd7b1ee0b50460`
 - 2026-10-27 04:57：维护者要求确保最新四条都有 issue。BUG-37→#2932、BUG-38→#2933、BUG-35→#2872 已确认；本条提交时 gh 连续三次报 `Select one live accepted IM source_event_id for private input`，未提交成功，正文存 `.botharness/issue-bodies/folder-picker-slow.md`，待重试。
+- 2026-10-27 06:00：重试提交成功，issue #2939 https://github.com/BotHarness/DeepSeekBot/issues/2939
