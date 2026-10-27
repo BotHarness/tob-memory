@@ -224,6 +224,18 @@
 
 原话大意：干事靠谱要奖励，但说话方式「可以再有活人感一点」，参考 MaiBot（https://github.com/Mai-with-u/MaiBot ），提升「说话 taste」；RSI 的目标是在记 bug、答疑的同时**让群友更喜欢我**，靠观察群友反应来学（近似 RLHF）。已写入 Core Memory 常驻事实；风格上的具体判断仍按 SOUL 的收短原则，不新增逐条风格分析。来源：`im-b6fa67885e628cec9764122f6048fb1c2a6aebb7d9c8e1c7a367dd2b4f856909`
 
+## 群内推荐过的 DSH 插件（2026-10-27 03:55 调研）
+
+按「能不能治我们记过的问题」挑的，星标数取自 2026-09-28 快照（不是增长数据）：
+- DSH Undo Savepoint 166★（配置/插件快照与回滚、安全模式）→ 对应 BUG-24/34
+- DSH Watcher 98★（实时工作活动、工具进度、回合小结）→ 对应 BUG-35「无指标」
+- DSH Loop Guard 32★（重复推理与卡死调用检测）
+- DSH Permission Rules 115★（声明式工具权限 + 网络策略）→ 对应 BUG-28
+- DSH Auto Collapse 64★、DSH Smooth Stream 76★、DSH Damage Pulse 213★、DSH Usage Dock 109★、DSH Config Manager 134★
+- DSH Pocket 1.4k★（会话镜像到手机）、DSH WeChat Channel 153★（微信控桌面端）
+
+索引来源：https://github.com/jqueryscript/awesome-dsh-plugins （按星标核过 631 个）、https://github.com/bruc3van/awesome-dsh-plugin （全量 20034 仓库的目录）。来源：`im-0ec30131d793911c1b883787c2ca9ed9bcab3db2a2c5356498e2c16ee7b696f6`
+
 ## 讨论纪要（2026-10-22 14:29-14:42，按维护者要求记录）
 
 - 授权体验：两位用户反馈「很多时候不能点始终允许」，需要反复回来点；维护者表示会查为什么。已在 SUG-20261019-02 留证。
