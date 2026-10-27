@@ -348,6 +348,7 @@
 - 补充诉求（2026-10-27 17:20）：单页内「上面设对话模型、下面设任务模型」，并希望有一个集中的配置界面，省掉来回点。来源：`im-898d16862b4efd021760c1d42631d54ecf7de9ed072ad587c520b45e43891bad`、`im-6ff1405dccbcb4f38aba6d4b34933fca9077e41a67bea103a5be30a26a48a44d`
 
 ---
+- GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3033 （正文含用户原话与期望布局）
 
 ## SUG-20261019-29 分享 Bot 前的「托布脱敏」流程（导出→审阅→打包）
 
