@@ -674,3 +674,18 @@
 - 2026-10-27 04:57：维护者要求确保最新四条都有 issue。BUG-37→#2932、BUG-38→#2933、BUG-35→#2872 已确认；本条提交时 gh 连续三次报 `Select one live accepted IM source_event_id for private input`，未提交成功，正文存 `.botharness/issue-bodies/folder-picker-slow.md`，待重试。
 - 2026-10-27 06:00：重试提交成功，issue #2939 https://github.com/BotHarness/DeepSeekBot/issues/2939
 - 状态更新（2026-10-27 14:20）：维护者称授权目录卡顿已有对应 PR；待发版验证。
+
+---
+
+## BUG-20261019-40 新建会话报「Orchestrator Session permission differs from this PersonaBot's access setting」
+
+- 状态：用户报告（现象与触发点清楚；版本与访问设置待补）
+- 首次报告：2026-10-27 14:28（Asia/Tokyo，QQ 群）
+- 现象：给 Bot 发消息开启新会话时失败，提示 `Session failed: Orchestrator Session permission differs from this PersonaBot's access setting`。用户描述：觉得对话有点长，于是发消息「开启新对话」，之后就报这个。
+- 预期：要么新建会话按 Bot 当前的访问设置创建，要么在设置冲突时给出可操作提示（哪个设置、怎么改），而不是直接失败。
+- 可能方向（未验证）：Orchestrator 会继承某个会话级权限快照，Bot 的 access setting 后来被改过（或两边默认值不同），新旧不一致时拒绝建会话。
+- 临时办法（待验证）：把 Bot 的工作区访问设置改成与当前 Orchestrator 一致后重建会话；或重启 Host 让设置快照刷新。
+- 关联：#2727（子代理权限边界）、BUG-28（权限静默收窄）同属权限模型问题。
+- 版本与环境：待补（App 版本、Bot 当前访问设置是 workspace-write 还是 danger-full-access）。
+- 来源 Source Event ID：`im-a502600e9d7d6b1baf469fcaf1bd32d4339ba1dd956fecf0561d8447a993d447`、`im-fd181c5c54358b3822d6b36f25e5fdeb4edc493ff17c7356c6814c76bcd975b6`
+
