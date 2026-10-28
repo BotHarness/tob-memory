@@ -721,3 +721,17 @@
 - 影响：安装中断，插件不可用；用户看不出是占用问题。
 - 来源 Source Event ID：`im-290db5c411f46157a22324518e085530b466ca69e1ad9682f9fd002a5d68e49a`
 
+---
+
+## BUG-20261019-43 新建会话报 INVALID_REQUEST：所有工具都被 defer_loading，至少需要一个不延迟加载
+
+- 状态：用户报告（2026-10-28）
+- 现象：新建会话直接失败，报
+  `Session failed: INVALID_REQUEST: tools: at least one tool must have defer_loading=false. All tools cannot be deferred. (request_id: 90bde4c4-9032-4353-9718-ac15db932e13)`
+- 预期：会话能建立；即使某个插件把工具全标成延迟加载，也应自动兜底保留一个常驻工具，或给出可操作的设置提示。
+- 判断（未验证）：某插件/配置把工具目录整体标记为 `defer_loading=true`，上游校验要求至少一个 `false`，于是请求在建会话阶段就被拒。与「装完插件后开不了新会话」的现象吻合。
+- 临时办法：禁用最近安装的插件再试；或让该插件作者把核心工具改成非延迟加载。
+- 影响：完全无法新建会话，属于阻断级。
+- 关联：BUG-40（Orchestrator 权限不一致同样表现为 Session failed）。
+- 来源 Source Event ID：`im-f62b0572bdfa6cc752035dc8093068d22ca1307f17f93575eec99f7e4e733782`
+
