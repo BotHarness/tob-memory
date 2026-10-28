@@ -696,6 +696,7 @@
 - 维护者结论（2026-10-27 16:09）：@ 报告者称「下一个版本修复 1.6.0」（`im-a9dd85612739d23e395362bedbdab353913f874415a8db2fd19bcd603d734822`）。
 
 ---
+- GitHub issue：#3134 https://github.com/BotHarness/DeepSeekBot/issues/3134
 
 ## BUG-20261019-41 引用消息再 @ Bot 时读不到被引用的内容
 
@@ -708,6 +709,7 @@
 - 来源 Source Event ID：`im-c850773e7451c2becad8e3be2be0448773d6b741f22fd41b535c667bd2f57f97`、`im-b14bcdbd21e5aae5e0758cb9fed808cf57a2cb5322ba004defddcf08c808280e`、`im-edb4e0e084495e5de812b077c961882ea054224b60195ba0814fb04a2edad506`
 
 ---
+- GitHub issue：#3135 https://github.com/BotHarness/DeepSeekBot/issues/3135
 
 ## BUG-20261019-42 Windows 上装插件时 pnpm 报 EPERM：无法重命名 node_modules 下的包目录
 
@@ -722,6 +724,7 @@
 - 来源 Source Event ID：`im-290db5c411f46157a22324518e085530b466ca69e1ad9682f9fd002a5d68e49a`
 
 ---
+- GitHub issue：#3136 https://github.com/BotHarness/DeepSeekBot/issues/3136
 
 ## BUG-20261019-43 新建会话报 INVALID_REQUEST：所有工具都被 defer_loading，至少需要一个不延迟加载
 
@@ -735,3 +738,4 @@
 - 关联：BUG-40（Orchestrator 权限不一致同样表现为 Session failed）。
 - 来源 Source Event ID：`im-f62b0572bdfa6cc752035dc8093068d22ca1307f17f93575eec99f7e4e733782`
 - 补充现场（2026-10-28 13:16）：错误详情标注「运行来源：Orchestrator」、HTTP 400、request_id `90bde4c4-9032-4353-9718-ac15db932e13`；用户已导出该会话（session zip）交给维护者排查。
+- GitHub issue：#3137 https://github.com/BotHarness/DeepSeekBot/issues/3137
