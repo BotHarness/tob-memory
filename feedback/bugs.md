@@ -734,4 +734,4 @@
 - 影响：完全无法新建会话，属于阻断级。
 - 关联：BUG-40（Orchestrator 权限不一致同样表现为 Session failed）。
 - 来源 Source Event ID：`im-f62b0572bdfa6cc752035dc8093068d22ca1307f17f93575eec99f7e4e733782`
-
+- 补充现场（2026-10-28 13:16）：错误详情标注「运行来源：Orchestrator」、HTTP 400、request_id `90bde4c4-9032-4353-9718-ac15db932e13`；用户已导出该会话（session zip）交给维护者排查。
