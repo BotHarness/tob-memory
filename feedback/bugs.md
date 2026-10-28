@@ -707,3 +707,17 @@
 - 临时办法：改为把原话复述或直接发截图。
 - 来源 Source Event ID：`im-c850773e7451c2becad8e3be2be0448773d6b741f22fd41b535c667bd2f57f97`、`im-b14bcdbd21e5aae5e0758cb9fed808cf57a2cb5322ba004defddcf08c808280e`、`im-edb4e0e084495e5de812b077c961882ea054224b60195ba0814fb04a2edad506`
 
+---
+
+## BUG-20261019-42 Windows 上装插件时 pnpm 报 EPERM：无法重命名 node_modules 下的包目录
+
+- 状态：用户报告（2026-10-28，Windows）
+- 现象：`dsh plugin` 安装时 pnpm 在最后一步失败：
+  `[ERR_PNPM_EPERM] [importPackage C:\Users\<user>\.dsh\profiles\desktop\node_modules\dsh-boot-animation] EPERM: operation not permitted, rename '...dsh-boot-animation_tmp_41392_13' -> '...dsh-boot-animation'`
+  其余依赖都已下载完成（resolved 376、added 295），只差把临时目录改名成正式目录。
+- 预期：能覆盖安装或给出「文件被占用，请关闭后重试」的明确提示。
+- 判断：Windows 上目录被占用时改名会 EPERM，常见占用方是该 profile 正在运行的 DSH 进程、预览/杀软、或上次失败残留的 `_tmp_*` 目录。
+- 临时办法：完全退出该 profile 的 DSH（含托盘/后台）→ 删掉 `node_modules` 里残留的 `*_tmp_*` → 重新安装；仍失败则以管理员身份再试，或把该目录加入杀软排除。
+- 影响：安装中断，插件不可用；用户看不出是占用问题。
+- 来源 Source Event ID：`im-290db5c411f46157a22324518e085530b466ca69e1ad9682f9fd002a5d68e49a`
+
