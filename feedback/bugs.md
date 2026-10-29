@@ -650,6 +650,7 @@
 - 规避：改用 npm 安装的 DSH 发行版，而不是源码 checkout。
 
 ---
+- 上游状态（2026-10-29 16:06 #2932 已 CLOSED）：tool-subagent-control 起不来的源码版问题已修复。按定时任务本应 Discord 通知 lucas，但 `bot_send_message` 定向 Discord 频道连续两次返回「authorized Channel is unavailable」（与 QQ 群定向发送同样受限），通知未送达；保留 schedule 待通道可用时重试。
 
 ## BUG-20261019-38 iOS 切后台再回来自动空白、点进会话无限闪屏
 
