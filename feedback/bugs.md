@@ -761,6 +761,7 @@
 
 ---
 - 扩展观察（2026-10-30 17:51-18:01）：不仅图片，**文件**也出现「[File not readable by the Bot]」占位、同样无附件元数据；累计十余条。范围从「图片附件丢失」扩大为「非文本消息的附件整体未送达」，优先级应上调。来源：`im-1fca453c52580bdbc37b81ee2b658c735cdfe1951e4f937bab8d4434808f7b7e`、`im-a5b057538f9c0b627e45eceaff46fcde87c526d9fe56783b171112f27fa24448`
+- GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3221 （2026-10-30 18:0x 创建，正文含对照实验与复现步骤，已去昵称/群号/内部 ID）
 
 ## BUG-20261019-45 桌面端顶栏无法用鼠标拖动窗口（Windows 11 专业版 26H2）
 
