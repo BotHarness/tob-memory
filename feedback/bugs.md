@@ -715,6 +715,7 @@
 ---
 - GitHub issue：#3135 https://github.com/BotHarness/DeepSeekBot/issues/3135
 - 维护者更新（2026-10-28 15:03）：消息类型相关的限制「已经都修了」，属之前代码的问题，随 1.6.0 上线（`im-ec445369927232afeb321d8d474d9de5c2b9deab7f682b10110dead1dceafdda`）；待发版后复验引用消息能否读到。
+- 复验（2026-10-30 15:42）：维护者在 1.6.0 上实测并称「QQ 现在引用消息正常了」，此条可判为已修复；对应上游 #2895（QQ 引用/图片/图文混合不再丢失）。来源：`im-58194b444c0e759cee4d6a6df6478b844de802a31b34fa7c859479994dcb82d4`
 
 ## BUG-20261019-42 Windows 上装插件时 pnpm 报 EPERM：无法重命名 node_modules 下的包目录
 
