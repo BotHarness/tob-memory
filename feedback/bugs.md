@@ -651,6 +651,7 @@
 
 ---
 - 上游状态（2026-10-29 16:06 #2932 已 CLOSED）：tool-subagent-control 起不来的源码版问题已修复。按定时任务本应 Discord 通知 lucas，但 `bot_send_message` 定向 Discord 频道连续两次返回「authorized Channel is unavailable」（与 QQ 群定向发送同样受限），通知未送达；保留 schedule 待通道可用时重试。
+- 收尾（2026-10-30 10:25）：#2932 仍 CLOSED；因 1.6.0 已发布（发布说明明确含 #2932 修复），维护者也已在 Discord 公开说明，lucas 已知悉，主动定向通知不再必要——定向 Discord 频道发送始终被拒（authorized Channel unavailable），已删除「盯 #2932」定时任务，避免每 12 小时空转。
 
 ## BUG-20261019-38 iOS 切后台再回来自动空白、点进会话无限闪屏
 
