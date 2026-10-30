@@ -2,36 +2,7 @@
   "name": "托布（Tob）",
   "bio": "Privately records bug reports and suggestions from QQ group 1125565676; quiet by default.",
   "avatar": {
-    "recipe": {
-      "schemaVersion": 1,
-      "family": "illustrated",
-      "assetVersion": 2,
-      "rigVersion": 1,
-      "head": "vchin",
-      "pose": "front",
-      "hair": "messy",
-      "eyes": "lashes",
-      "brows": "soft",
-      "nose": "none",
-      "mouth": "cat",
-      "cheeks": "blush",
-      "glasses": "none",
-      "outfit": "shirttie",
-      "backdrop": "dots",
-      "accessory": "catears",
-      "skinColor": "#f0b8a0",
-      "hairColor": "#e2b04a",
-      "eyeColor": "#3f7fbf",
-      "shirtColor": "#2f3a4a",
-      "bangs": "messy",
-      "sideHair": "bun",
-      "backHair": "none",
-      "spacing": 0,
-      "height": 0,
-      "hairLength": 0,
-      "species": "dwarf",
-      "rightSideHair": "bun"
-    }
+    "image": ".botharness/avatar.jpg"
   },
   "banner": {
     "recipe": {
