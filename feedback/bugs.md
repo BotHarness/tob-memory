@@ -771,3 +771,4 @@
 - 待补信息：Tobs 版本、是否最大化状态、是否改过桌面整窗缩放（`deepseekbot-zoom-setup`）、多显示器/缩放比例、鼠标是否能拖动其他窗口。
 - 临时办法：用 Alt+Space 调出系统菜单选「移动」，或用 Win+方向键移动窗口。
 - 来源 Source Event ID：`im-16c46abbcaa8b6ff037a6cd633d1f51b680c04fcd61f44e43b93a2b062494451`、`im-24be1845e2638ce5472a369661d7de3e7b912dd63ef4f0f59fcd38ad5d0580a8`、`im-b786ce34facd943d5c68d24cd23afdf007986044020d7f47c0c9e2063f905eb1`
+- 环境确认（2026-10-30 17:26）：DSH `0.2.1-rc.5`、Tobs `1.6.0`、窗口非最大化、未开整窗缩放、系统缩放 100%、单显示器——排除了「最大化」与缩放因素，是真实可复现路径待定的缺陷。来源：`im-51fe446d98b77b464fed09eedfc03f49c64108ac8aeba596cf148d525f9d5b67`
