@@ -745,3 +745,16 @@
 - 来源 Source Event ID：`im-f62b0572bdfa6cc752035dc8093068d22ca1307f17f93575eec99f7e4e733782`
 - 补充现场（2026-10-28 13:16）：错误详情标注「运行来源：Orchestrator」、HTTP 400、request_id `90bde4c4-9032-4353-9718-ac15db932e13`；用户已导出该会话（session zip）交给维护者排查。
 - GitHub issue：#3137 https://github.com/BotHarness/DeepSeekBot/issues/3137
+
+---
+
+## BUG-20261019-44 1.6.0 升级后群里的图片消息变成「[Image not readable by the Bot]」占位
+
+- 状态：疑似回归（待维护者确认）
+- 首次出现：2026-10-30 16:17-16:55（QQ 群，1.6.0 上线后）
+- 现象：连续多条消息只带「[Image not readable by the Bot]」占位，事件里 `attachments` 为空；同一批次里更早的一条（15:42）却带 `attachments` 且能正常保存与读图（`read_image` 成功，1672×941）。
+- 预期：图片消息应当带附件元数据并可由 Bot 读取/保存。
+- 影响：Bot 无法看图，只能回复「图没过来」，用户会以为 Bot 装死。
+- 差异线索：15:42 那条是回复引用消息里的图；16:17 之后的多条是纯图片消息。可能是图片消息（非引用）路径在 1.6.0 / im-provider 4.32.0-botharness.23 上丢了附件字段。
+- 临时办法：让用户把图放进引用消息再发，或让群友改发文件。
+- 来源 Source Event ID：`im-46b337fb815bea7aa251a60ac3b3c0a0e0403d6802db1b62e2362eb6695ef414`、`im-42e5ea75efdabd0c4290a09d284d16ed0f8fb404b00030b4e0543a36397f5d1c`、`im-107a669a73e9802df3d8904aad744bf575cc0c9f513d9a8e5eff1b667ff879d9`、`im-1762c66fe84b135fc2b3a04036f9dbebc7c8fc54967bd2ab91bffc896cf70d9d`、`im-c5cb28224d84bac367a50c212e8c638d0d91e60d967702479afe1dace7931416`、`im-387903f9a934e78ca9ece4d1c0e3187a427f67a908451f47b4b39066aa97e2b0`、`im-12b84d902407c212c15ebc13d9c4eb96d71716bbae56650ab88734dce3c61052`
