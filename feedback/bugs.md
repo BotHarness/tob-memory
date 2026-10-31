@@ -872,6 +872,7 @@
 
 ---
 - GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3236 （2026-10-31 补开，阻断级，含卸载即恢复的对照与待补版本信息）
+- 疑似同源（15:59）：issue #3248「启动时 usage reconciliation 在大 session 历史上耗尽堆」——2 GiB 内存机器、49 个 tracked session、压缩日志 12–23 MB 展开到 50–72 MB，配合重启策略表现为重启循环；#3236 的「装完直接卡死」很可能同一根因（无重启策略时表现为卡死）。已在该 issue 下交叉引用并给出惰性统计/有界读取的排查建议。来源：`im-8e19bcdd8fa66f7d5b7dfb512d39d00bfcf7455ef825c876d8eca8416848da2c`
 
 ## BUG-20261019-52 在 Bot 模式里更新插件会把 DSH 改崩
 
