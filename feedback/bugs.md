@@ -890,3 +890,15 @@
 - 影响：装后首次使用即卡死，只能强退，阻断级。
 - 证据：截图已存 `/opt/botharness/seo-tutorial/feedback-media/.botharness/qq-source-1031/pic1.png`（1077×695）。
 - 来源 Source Event ID：`im-8992f2f4bc4558278fbdad71f6c0f3fe1cd02f4e7b8d786978c117f337373cc8`、`im-54b6e1835b3d551da2093fd7f5f8fec4934c8303d61085b86b30a649faf3c896`
+
+---
+
+## BUG-20261019-54 Android 长按语音输入松手后不出字
+
+- 状态：已开 issue #3233
+- 首次报告：2026-10-31 11:48-11:49（Android 内测群，维护者自述与我方确认）
+- 现象：长按输入框说话，松手之后输入框没有文字；用户判断「最后一段音频没被处理」。
+- 预期：松手时把最后一段音频也转写完成再结束，并给出结果或「未识别到」的明确反馈。
+- 环境：Android，Tobs 移动端 1.5.3（用户自述「最新的 Android 版本」）。
+- 待补：松手后有无 UI 反馈、长短按差异、是否与具体输入法相关、日志里识别请求是否发出。
+- 来源 Source Event ID：`im-0563f256004c6196493d3d1101c9e9cb93736b3a838ff43f44dcaffa06c6837a`、`im-822f39c30fdb2b171490866d319e5a762dd80a30d553c953501ef16dd859a601`
