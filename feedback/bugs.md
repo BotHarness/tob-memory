@@ -811,6 +811,7 @@
 - GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3222 （2026-10-31 创建，正文含复现步骤、环境、初步判断与临时绕过）
 
 ---
+- 已修复（2026-10-31 14:24 核实）：PR #3241 `fix(client): open native model settings through its named entry` 已 MERGED，改动含 `bot-settings-open.ts` 与验证文档，对应 #3222。待发布后向报障者确认。
 
 ## BUG-20261019-48 多 Bot 共用与群聊场景下卡顿，怀疑上下文过大导致加载慢
 
