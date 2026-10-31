@@ -411,3 +411,18 @@
 - 建议：面板内加可折叠「详细信息」区（默认收起，显示最近 N 行与失败阶段），并提供「打开日志目录」「复制错误」；重试后刷新日志。日志复用诊断包数据，不新造链路。
 - 证据：截图存 `/opt/botharness/seo-tutorial/feedback-media/.botharness/qq-source-1031b/pic1.png`（630×508）。
 - 来源 Source Event ID：`im-171b575a6cf8903d10730d2fa121fa07efab480dec4a7574f3c4bab6777e35cb`
+
+---
+
+## SUG-20261019-34 群友自研框架 dsh-mnemon 的分层设计（评审意见）
+
+- 状态：外部设计评审（非 Tobs 需求）
+- 首次提出：2026-10-31 15:19（QQ 群）
+- 对方分层：Runtime Memory / Project Documents / Memory Spaces / Skills / Git Sync；05 Execution & Governance：Kanban / Task Ledger / Pipeline / Audit / Review Permission / Approval；06 Mobile Dashboard：任务状态 / Agent 状态 / 审批 / 交付物 / 异常通知。
+- 我给出的判断：
+  1. 记忆三层区分**方向对**——Tobs 目前把运行时记忆、项目文档、跨项目空间全塞进单一 Git 仓库，没有显式分层。
+  2. 「记忆空间」若按项目分目录会与「一个 Bot 一份 memory 仓库」模型冲突（需多仓库/子模块，多机同步变复杂），建议先只做文档层。
+  3. Execution 层三件套（Kanban/Task Ledger/Pipeline）易过度设计成 Jira；维护者此前明确不要那个方向（见 SUG-31），建议直接复用 Assignment 骨架（派出→隔离执行→报告回来）再加台账。
+  4. Skills 层不要硬造：DSH 自身有 skill 目录，重复会两边不同步。
+  5. 06 的异常通知有现实前置：安卓通知通道未注册（#3223），修好前手机上弹不出来。
+- 来源 Source Event ID：`im-9627072b79d36b03354e9d77738970b4a738cccf24011e8dd93461d78b21124d`
