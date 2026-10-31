@@ -780,6 +780,7 @@
 
 ---
 - GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3237 （2026-10-31 补开，含环境矩阵、判定为自绘标题栏 drag 热区、Alt+Space 绕过）
+- 决定性线索（12:47）：另一位用户报「**回到 DSH 默认模式就能拖**」，即只有 Bot 模式（Tobs 生效）下顶栏失效——锁定为 Tobs 接管/改写的标题栏 drag 热区问题，与系统、DSH 本体无关；且 `Alt+Space → 移动` 对其无效。已作为评论补进 #3237。来源：`im-e0fa022bf5bcf7d8c33ae047b4b77f89507132097bfaae097d1961a67aedcb8b`
 
 ## BUG-20261019-46 Bot 收到 @ 后「假死」不回复
 
