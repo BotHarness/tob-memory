@@ -804,3 +804,5 @@
 - 待补信息：Tobs 版本；是否必现；同一环境点别的跳转是否也错位（判断是不是事件串了）；控制台有无报错。
 - 备注：1.6.0 声明兼容 DSH `0.2.1-rc.3`，用户跑 rc.2，需先排除版本差异再定性。
 - 来源 Source Event ID：`im-919fe89b0c9ba971e5783e68bc2a4c567f658c62f00e67da75a6a806e0e83f0a`
+- 确认（07:36）：用户回「按钮每次准确触发、Tobs 最新版、刚刚部署」——即**必现**，Tobs 1.6.0 + DSH 0.2.1-rc.2。来源：`im-87daaaa0db8425dcca5244769216eafad11931bbbe366f81c19c088395ecfaa9`
+- GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3222 （2026-10-31 创建，正文含复现步骤、环境、初步判断与临时绕过）
