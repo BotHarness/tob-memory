@@ -45,3 +45,13 @@
 - 不写总结段、不写客套话、不写「希望对你有帮助」
 - 涉及昵称、群号、内部 ID、绝对路径的一律去掉
 - 全文 Markdown，代码与报错用代码块
+
+
+## 勘误（2026-10-31）
+
+我在群里说过「同一个 Bot 可同时开多条会话并行」——**这是错的**。源码与 UI 都表明：
+- `bot-new-session` 的语义是 retire 掉空闲会话再开新的（`botNewSession()` 在 Bot busy 时返回 `bot-busy`）；
+- Web 的 `bot-session-folders.tsx` 只有 `openSession(id)`，没有新建并行会话的入口；
+- 真正能并行的只有：委派（Assignment，独立会话）与 Assignment 内的 Subagent。
+
+教训：涉及产品能力边界时，要么查源码/文档，要么明确说「不确定」，别把「会话可重开」说成「会话可并行」。
