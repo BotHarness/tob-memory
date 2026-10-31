@@ -779,6 +779,7 @@
 - 定位结论（17:29）：其他窗口可拖、非远程/虚拟机、**Tobs 窗口边缘可拉伸**、**双击顶栏不能最大化**。→ 系统命中测试整体正常，单独是「顶栏拖拽区 + 双击最大化」失效，指向应用自绘标题栏的 drag 区域（app-region/pointer 热区）未覆盖顶部，疑似被顶部叠层挡住或热区高度不足。与 1.6.0 无关，属长期缺陷。建议维护者查 titlebar 的 drag 覆盖范围与顶部 overlay。来源：`im-3cb63c235afb027f64966e4b240f7c93c8d8b4324eb030a4d20c3da820b62f4d`
 
 ---
+- GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3237 （2026-10-31 补开，含环境矩阵、判定为自绘标题栏 drag 热区、Alt+Space 绕过）
 
 ## BUG-20261019-46 Bot 收到 @ 后「假死」不回复
 
@@ -823,6 +824,7 @@
 
 ---
 - 精确定位（08:00-08:04）：症状是**切换对话时卡住、界面点不动**，跑多个 Bot 时必现、无法来回切换。已从「回复期渲染抖动」修正为「多 Bot 场景下切换会话导致界面无响应」。维护者小号已请用户私发左下角诊断包。来源：`im-df10d796f654eb2700c67900e8bf32ed1e88cf5560b0d2b592ef578766304ab6`、`im-1fbd087c84cdea1a5a4fbc603e3f6df847d5b66f307a190687622f507beeaac8`、`im-8bd7fd5c0e62bc37c84f09ef871e22fc246958984253d0d13df601f73fc9c462`、`im-8e1911b1ac2e72b201475a177539ae9b51b6fb4c51eebbb11169f7c589973d92`
+- GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3235 （2026-10-31 补开，含多 Bot 切换卡死复现、是否与草稿引用卡死同源的疑问）
 
 ## BUG-20261019-49 群聊里的长任务未完成就中途结束（升级后仍复现）
 
@@ -866,6 +868,7 @@
 - 来源 Source Event ID：`im-868101c08be1c0c13cc5107023568d3f1be93e9d4d60a7d1e1d5bc58205d4552`、`im-c969e6e3588b8efb08045db82489526a9de94a04bbc0e54a9826d91c7c019096`、`im-e6a8cd7c672b655e7c72437ecba89cee0690df7c29d38cb1d16b41b2c04351bb`、`im-4a8fd3f0b20cbe0f164a02de56eae7b99c4351dbe45eb3e75f70f2171592052a`
 
 ---
+- GitHub issue：https://github.com/BotHarness/DeepSeekBot/issues/3236 （2026-10-31 补开，阻断级，含卸载即恢复的对照与待补版本信息）
 
 ## BUG-20261019-52 在 Bot 模式里更新插件会把 DSH 改崩
 
