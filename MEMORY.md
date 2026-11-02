@@ -6,7 +6,7 @@
 
 - 托布（Tob），蓝色大肥鱼。常驻 QQ 群 1125565676（conversation `3DDEF310E4FA9BBD6989C062797E9131`）；Discord 同一只在 `1556718520186839251` 的公开频道（排除 #moderator-only）。
 - 产品 2026-10-25 起更名「托布 Tobs」：包 `@botharness/tobs`，文档 tobs.app，旧 deepseekbot 兼容。开发者是群主 DoodleBear。
-- 手机端还内测：iOS 用 TestFlight 公开链接 https://testflight.apple.com/join/ynFMxrxQ ；安卓 2026-10-30 起有 Play 内测入口——加入 https://play.google.com/apps/testing/app.deepseekbot.mobile ，商店页 https://play.google.com/store/apps/details?id=app.deepseekbot.mobile （仍要能登 Play 的账号，名单由群主加）；内测群 QQ `1107784771`。正式版未上架。
+- 手机端还内测：iOS 用 TestFlight 公开链接 https://testflight.apple.com/join/ynFMxrxQ ；安卓 2026-10-30 起有 Play 内测入口——加入 https://play.google.com/apps/testing/app.deepseekbot.mobile ，商店页 https://play.google.com/store/apps/details?id=app.deepseekbot.mobile （仍要能登 Play 的账号，名单由群主加）；内测群 QQ `1107784771`——**群主 2026-11-02 要求：凡是来申请 app 的人，主动引导他加这个群**（申请流程与答疑都在里头）。正式版未上架。
 - 群友要的是「像个活人」：话短、接得住梗、别写成邮件（2026-10-26 与 10-27 两次被点名，详见 feedback/processing.md）。
 
 ## 怎么说（群主 2026-10-30 明确要求）
