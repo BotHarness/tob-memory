@@ -1034,3 +1034,16 @@
 - 判断：左侧栏顶部区域两个入口争同一块空间，属布局叠放冲突（z-index/absolute 定位），非渲染缺失。
 - 仍缺：版本号、窗口宽度与缩放比例。
 - 来源 Source Event ID：`im-0b21a1820a7868b686ef7c0e8d474033b3131489744083c8747a77f69a048770`
+
+---
+
+## BUG-20261019-63 Bot 链路约 30s 即判失败且不重试，与 DSH 直连不一致
+
+- 状态：已开 issue #3300（待修）
+- 场景：本地部署大模型、并发只能 1（可串行排队）
+- 对照：DSH 直连——最长等 300s、仅提示超时、重试 5 轮，4 个会话并用不报错；经 Bot（Tobs）链路——体感约 30s 内即失败，无重试
+- 报错：`PI_AI_ERROR` / `Concurrency limit exceeded for user, please retry later`（运行来源 Orchestrator）
+- 影响：本地模型用户在 Bot 模式下几乎无法多人同时使用；群聊天然并发，触发概率高；报错文案易被误判为账号/上游问题
+- 建议（已写进 issue）：沿用 DSH 的等待与重试、或把超时与重试暴露为配置项、对并发类错误做退避重试
+- 待补：Tobs 侧精确超时阈值；是否所有 provider 一致
+- 来源 Source Event ID：`im-4ed85cdd2c0a4ffb1d94813a4dadae7d5d93dea72fc8f2754334954f874b3fec`、`im-c00cfdb4cd62102c3a3fc83a66c6003c12c75798ef6ea4ec3d799c9a090bc9b2`、`im-2bb0ed3bd9013f402ec8e539970390edb57137fce6781e767dee510cf6f91b8d`
