@@ -1007,3 +1007,15 @@
 - 关联：与移动端整体适配（平板分栏）同族，可考虑 iPad 侧栏 + 内容双栏布局。
 - 来源 Source Event ID：`im-e25e759048dedce1640d486a6d87e7289c25595bd286a47126e81cc980c91471`
 - 版本：用户称「DSHNEXT 最新版」，未报具体版本号（不知在哪里看）。
+
+---
+
+## BUG-20261019-61 Windows 上从 Bot 市场导入 Bot 报 EPERM，新建 Bot 正常
+
+- 状态：已开 issue #3294（待修）
+- 环境：Windows，DSH 0.2.1-rc.5
+- 现象：新建 Bot 正常；从 Bot 市场导入任意 Bot 均失败，报 `EPERM, Permission denied: \\?\C:\Users\<user>\AppData\Local\Temp\tobs-install-review-XXXX`；失败后残留目录内容完整、可正常删除。
+- 判断（待验证）：安装流程为「解压到 TEMP → 移动到最终位置」，Windows 上 rename/move 遇到未释放句柄即 EPERM（杀软扫描、解压进程自身句柄、或该目录被当作 cwd）。残留可删说明写入正常，卡在移动。
+- 临时绕法建议：把 TEMP 改到短路径（如 C:\\tmp）后重试；临时关闭杀软实时防护再试一次。
+- 关联：与 BUG-42（pnpm 安装时无法重命名 node_modules 下包目录）同属 Windows rename/EPERM 家族。
+- 来源 Source Event ID：`im-108294b8a90493020e664b62a62832f5ffa09988a520341967f20fdd4aeb7622`
